@@ -34,7 +34,7 @@
             this.btnUser = new System.Windows.Forms.Button();
             this.panelPlaylistSubmenu = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnAddStock = new System.Windows.Forms.Button();
             this.btnShowStock = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.panelMediaSubmenu = new System.Windows.Forms.Panel();
@@ -46,6 +46,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dblLogout = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelPlaylistSubmenu.SuspendLayout();
             this.panelMediaSubmenu.SuspendLayout();
@@ -59,6 +60,7 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panelSideMenu.Controls.Add(this.dblLogout);
             this.panelSideMenu.Controls.Add(this.btnHelp);
             this.panelSideMenu.Controls.Add(this.btnUser);
             this.panelSideMenu.Controls.Add(this.panelPlaylistSubmenu);
@@ -69,7 +71,7 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 664);
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 696);
             this.panelSideMenu.TabIndex = 0;
             // 
             // btnHelp
@@ -112,7 +114,7 @@
             // 
             this.panelPlaylistSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panelPlaylistSubmenu.Controls.Add(this.button5);
-            this.panelPlaylistSubmenu.Controls.Add(this.button6);
+            this.panelPlaylistSubmenu.Controls.Add(this.btnAddStock);
             this.panelPlaylistSubmenu.Controls.Add(this.btnShowStock);
             this.panelPlaylistSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPlaylistSubmenu.Location = new System.Drawing.Point(0, 419);
@@ -138,23 +140,23 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // btnAddStock
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(128)))), ((int)(((byte)(166)))));
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button6.ForeColor = System.Drawing.Color.LightGray;
-            this.button6.Location = new System.Drawing.Point(0, 40);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(250, 40);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "button6";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnAddStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(128)))), ((int)(((byte)(166)))));
+            this.btnAddStock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddStock.FlatAppearance.BorderSize = 0;
+            this.btnAddStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAddStock.ForeColor = System.Drawing.Color.LightGray;
+            this.btnAddStock.Location = new System.Drawing.Point(0, 40);
+            this.btnAddStock.Name = "btnAddStock";
+            this.btnAddStock.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnAddStock.Size = new System.Drawing.Size(250, 40);
+            this.btnAddStock.TabIndex = 1;
+            this.btnAddStock.Text = "Dodaj Towar";
+            this.btnAddStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddStock.UseVisualStyleBackColor = false;
+            this.btnAddStock.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnShowStock
             // 
@@ -305,25 +307,42 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(684, 664);
+            this.panelChildForm.Size = new System.Drawing.Size(708, 696);
             this.panelChildForm.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(86, 68);
+            this.pictureBox1.Location = new System.Drawing.Point(98, 84);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(500, 500);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // dblLogout
+            // 
+            this.dblLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.dblLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dblLogout.FlatAppearance.BorderSize = 0;
+            this.dblLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dblLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dblLogout.ForeColor = System.Drawing.Color.Gainsboro;
+            this.dblLogout.Location = new System.Drawing.Point(0, 638);
+            this.dblLogout.Name = "dblLogout";
+            this.dblLogout.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.dblLogout.Size = new System.Drawing.Size(250, 45);
+            this.dblLogout.TabIndex = 8;
+            this.dblLogout.Text = "Wyloguj";
+            this.dblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dblLogout.UseVisualStyleBackColor = false;
             // 
             // MainBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Plum;
-            this.ClientSize = new System.Drawing.Size(934, 664);
+            this.ClientSize = new System.Drawing.Size(958, 696);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
             this.MinimumSize = new System.Drawing.Size(950, 600);
@@ -347,7 +366,7 @@
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Panel panelPlaylistSubmenu;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnAddStock;
         private System.Windows.Forms.Button btnShowStock;
         private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.Panel panelMediaSubmenu;
@@ -359,6 +378,7 @@
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button dblLogout;
     }
 }
 

@@ -118,6 +118,9 @@ namespace ModernUI
 
         private void button6_Click(object sender, EventArgs e)
         {
+            AddStock addstock = new AddStock();
+            addstock.Show();
+
             /*
              * Jakiś kod
              * 
