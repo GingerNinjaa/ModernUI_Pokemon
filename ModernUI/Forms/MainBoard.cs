@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ModernUI
 {
-    public partial class Form1 : Form
+    public partial class MainBoard : Form
     {
-        public Form1()
+        public MainBoard()
         {
             InitializeComponent();
             customizeDesing();
@@ -55,22 +55,24 @@ namespace ModernUI
             }
         }
 
-        private void btnMedia_Click(object sender, EventArgs e)
+        private void btnEmployee_Click(object sender, EventArgs e)
         {
             showSubMenu(panelMediaSubmenu);
         }
 
         #region MediaSubMenuButtons
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnShowEmployee_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form2());
+            openChildForm(new ShowEmployee());
 
             //hideSubMenu();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAddEmployee_Click(object sender, EventArgs e)
         {
+            openChildForm(new AddEmployee());
+
             /*
              * Jakiś kod
              * 
@@ -155,6 +157,16 @@ namespace ModernUI
         private void btnEqualizer_Click(object sender, EventArgs e)
         {
             openChildForm(new Form3());
+        }
+
+        private void btnDeleteEmplayee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.dlewandowski.pl");
         }
     }
 }

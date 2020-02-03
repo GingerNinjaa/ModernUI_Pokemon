@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ModernUI
 {
-    public partial class Form2 : Form
+    public partial class ShowEmployee : Form
     {
-        public Form2()
+        public ShowEmployee()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnGoBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
