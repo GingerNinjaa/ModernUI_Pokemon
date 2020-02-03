@@ -10,7 +10,7 @@ namespace ModernUI
     {
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
-        /// </summary>
+        /// </summary>  
         [STAThread]
         static void Main()
         {
