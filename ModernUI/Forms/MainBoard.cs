@@ -168,5 +168,10 @@ namespace ModernUI
         {
             System.Diagnostics.Process.Start("https://www.dlewandowski.pl");
         }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace ModernUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainBoard());
+            Application.Run(new Login());
         }
     }
 }
