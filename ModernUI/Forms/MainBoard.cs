@@ -22,7 +22,7 @@ namespace ModernUI
         private void customizeDesing()
         {
             // chowamy submenu
-            panelMediaSubmenu.Visible = false;
+          
             panelPlaylistSubmenu.Visible = false;
 
         }
@@ -30,10 +30,7 @@ namespace ModernUI
         //chowamy submenu które zostało pokazane wcześniej
         private void hideSubMenu()
         {
-            if (panelMediaSubmenu.Visible == true)
-            {
-                panelMediaSubmenu.Visible = false;
-            }
+            
             if (panelPlaylistSubmenu.Visible == true)
             {
                 panelPlaylistSubmenu.Visible = true;
@@ -59,40 +56,9 @@ namespace ModernUI
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelMediaSubmenu);
-        }
-
-        #region MediaSubMenuButtons
-
-        private void btnShowEmployee_Click(object sender, EventArgs e)
-        {
             openChildForm(new ShowEmployee());
-
-            //hideSubMenu();
+          
         }
-
-        private void btnAddEmployee_Click(object sender, EventArgs e)
-        {
-            openChildForm(new AddEmployee());
-
-            /*
-             * Jakiś kod
-             * 
-             * 
-             */
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            /*
-             * Jakiś kod
-             * 
-             * 
-             */
-
-        }
-        #endregion
 
 
         private void btnStock_Click(object sender, EventArgs e)
