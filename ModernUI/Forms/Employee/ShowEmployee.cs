@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ModernUI
+namespace ModernUI.Forms.Employee
 {
-    public partial class AddEmployee : Form
+    public partial class ShowEmployee : Form
     {
-        public AddEmployee()
+        public ShowEmployee()
         {
             InitializeComponent();
         }

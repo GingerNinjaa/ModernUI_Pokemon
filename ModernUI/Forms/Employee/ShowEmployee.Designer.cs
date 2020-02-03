@@ -1,4 +1,4 @@
-﻿namespace ModernUI
+﻿namespace ModernUI.Forms.Employee
 {
     partial class ShowEmployee
     {

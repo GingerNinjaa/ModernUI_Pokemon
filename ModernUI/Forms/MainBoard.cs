@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ModernUI.Forms.Employee;
+using ModernUI.Forms.Stock;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,15 +95,17 @@ namespace ModernUI
         #endregion
 
 
-        private void btnPlaylist_Click(object sender, EventArgs e)
+        private void btnStock_Click(object sender, EventArgs e)
         {
             showSubMenu(panelPlaylistSubmenu);
         }
 
         #region PlaylistSubMenuButtons
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnShowStock_Click(object sender, EventArgs e)
         {
+
+            openChildForm(new AllStock());
             /*
              * 
              * Jakiś kod
