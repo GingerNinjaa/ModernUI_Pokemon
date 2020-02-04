@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f51132ed6cb942989ebabe96b15dd854" Name="Diagram1">
+        <EntityTypeShape EntityType="CompanyDBModel.tblCategory" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyDBModel.tblGender" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyDBModel.tblProducts" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyDBModel.tblRole" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyDBModel.tblUser" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="CompanyDBModel.FK_tblProducts_tblCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyDBModel.FK_tblUser_tblGender" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyDBModel.tblUserRole" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
