@@ -14,8 +14,11 @@ namespace ModernUI
 {
     public partial class MainBoard : Form
     {
-        public MainBoard()
+        tblUser CurentUser = new tblUser();
+        public MainBoard(tblUser dto)
         {
+            this.CurentUser = dto;
+
             InitializeComponent();
             customizeDesing();
         }
@@ -127,9 +130,9 @@ namespace ModernUI
            
         }
 
-        private void btnEqualizer_Click(object sender, EventArgs e)
+        private void btnUser_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form3());
+            openChildForm(new User(CurentUser));
         }
 
         private void btnDeleteEmplayee_Click(object sender, EventArgs e)
@@ -146,5 +149,7 @@ namespace ModernUI
         {
 
         }
+
+
     }
 }

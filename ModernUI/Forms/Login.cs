@@ -98,24 +98,33 @@ namespace ModernUI
             //CompanyDBEntities
             using (CompanyDBEntities db = new CompanyDBEntities())
             {
+                
                 if (db.tblUser.Any(x => x.UserName.Equals(txtLogin.Text) && x.Password.Equals(txtPassword.Text)))
                 {
                     isvalid = true;
+                    
+                    //UserDTO dto  = db.tblUser.FirstOrDefault(x => x.UserName)
                 }
             }
 
             if (isvalid == false)
             {
-
                 MessageBox.Show("error", "erorr");
-
             }
             else
             {
+                tblUser CurentUser = new tblUser();
+
+                using (CompanyDBEntities db = new CompanyDBEntities())
+                {
+                    CurentUser = db.tblUser.FirstOrDefault(x => x.UserName == txtLogin.Text);
+                }
+                    
                 //Close Login and open MainBoard
                 this.Hide();
-                var menu = new MainBoard();
+                var menu = new MainBoard(CurentUser);
                 menu.Show();
+                
             }
 
         }

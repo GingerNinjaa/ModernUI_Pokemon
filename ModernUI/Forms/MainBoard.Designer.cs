@@ -119,7 +119,7 @@
             this.btnUser.Text = "Uzytkownik";
             this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUser.UseVisualStyleBackColor = false;
-            this.btnUser.Click += new System.EventHandler(this.btnEqualizer_Click);
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // panelPlaylistSubmenu
             // 

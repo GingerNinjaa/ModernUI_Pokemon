@@ -112,11 +112,11 @@
     <Compile Include="Forms\Employee\ShowEmployee.Designer.cs">
       <DependentUpon>ShowEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form3.cs">
+    <Compile Include="Forms\User.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Forms\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Stock\AddStock.cs">
       <SubType>Form</SubType>
@@ -147,6 +147,7 @@
     <Compile Include="tblUser.cs">
       <DependentUpon>CompanyModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserDTO.cs" />
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,8 +157,8 @@
     <EmbeddedResource Include="Forms\Employee\ShowEmployee.resx">
       <DependentUpon>ShowEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stock\AddStock.resx">
       <DependentUpon>AddStock.cs</DependentUpon>
