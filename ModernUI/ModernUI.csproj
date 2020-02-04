@@ -74,6 +74,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompanyDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CompanyModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -173,6 +178,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CompanyModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="CompanyDBDataSet.xsc">
+      <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CompanyDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanyDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompanyDBDataSet.xss">
+      <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="CompanyModel.edmx.diagram">
       <DependentUpon>CompanyModel.edmx</DependentUpon>
     </None>

@@ -22,7 +22,7 @@ namespace ModernUI
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd,int wmsg, int wparam, int lparam);
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -65,7 +65,7 @@ namespace ModernUI
         }
 
         private void txtPassword_Leave(object sender, EventArgs e)
-        {      
+        {
             // jeśli pole jest puste to wpisz tam "PASSWORD"
             if (txtPassword.Text == "")
             {
@@ -91,12 +91,33 @@ namespace ModernUI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        // Logowanie do Systemu 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //Close Login and open MainBoard
-            this.Hide();
-            var menu = new MainBoard();
-            menu.Show();          
+            bool isvalid = false;         
+            //CompanyDBEntities
+            using (CompanyDBEntities db = new CompanyDBEntities())
+            {
+                if (db.tblUser.Any(x => x.UserName.Equals(txtLogin.Text) && x.Password.Equals(txtPassword.Text)))
+                {
+                    isvalid = true;
+                }
+            }
+
+            if (isvalid == false)
+            {
+
+                MessageBox.Show("error", "erorr");
+
+            }
+            else
+            {
+                //Close Login and open MainBoard
+                this.Hide();
+                var menu = new MainBoard();
+                menu.Show();
+            }
+
         }
     }
 }
