@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace ModernUI
 {
@@ -22,6 +23,33 @@ namespace ModernUI
             InitializeComponent();
             customizeDesing();
         }
+
+        /*
+        //Turbo ważne do przesuwanie okienka PART 2
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        private void MainBoard_MouseDown(object sender, MouseEventArgs e)
+        {
+            //Przesuwanie Okien PART 3  
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            //Przesuwanie Okien PART 3  
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        */
+
+
+
+
+
         private void customizeDesing()
         {
             // chowamy submenu
@@ -156,5 +184,19 @@ namespace ModernUI
             var login = new Login();
             login.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+
+
+   
     }
 }
