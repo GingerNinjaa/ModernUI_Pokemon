@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -37,7 +38,7 @@ namespace ModernUI
             txtFirstNameEdit.Text = CurentUser.FirstName.ToString();
             txtLastNameEdit.Text = CurentUser.LastName.ToString();
             txtEmailEdit.Text = CurentUser.Email.ToString();
-            
+
         }
 
 
@@ -54,7 +55,7 @@ namespace ModernUI
             if (txtFirstNameEdit.Text == CurentUser.FirstName.ToString())
             {
                 txtFirstNameEdit.Text = "";
-              
+
             }
         }
 
@@ -64,14 +65,14 @@ namespace ModernUI
             if (txtFirstNameEdit.Text == "")
             {
                 txtFirstNameEdit.Text = CurentUser.FirstName.ToString();
-                
+
             }
         }
-       
+
 
         private void txtUserNameEdit_Enter(object sender, EventArgs e)
         {
-            
+
             if (txtUserNameEdit.Text == CurentUser.UserName.ToString())
             {
                 txtUserNameEdit.Text = "";
@@ -81,7 +82,7 @@ namespace ModernUI
 
         private void txtUserNameEdit_Leave(object sender, EventArgs e)
         {
-           
+
             if (txtUserNameEdit.Text == "")
             {
                 txtUserNameEdit.Text = CurentUser.UserName.ToString();
@@ -91,7 +92,7 @@ namespace ModernUI
 
         private void txtLastNameEdit_Enter(object sender, EventArgs e)
         {
-            
+
             if (txtLastNameEdit.Text == CurentUser.LastName.ToString())
             {
                 txtLastNameEdit.Text = "";
@@ -101,7 +102,7 @@ namespace ModernUI
 
         private void txtLastNameEdit_Leave(object sender, EventArgs e)
         {
-           
+
             if (txtLastNameEdit.Text == "")
             {
                 txtLastNameEdit.Text = CurentUser.LastName.ToString();
@@ -111,7 +112,7 @@ namespace ModernUI
 
         private void txtEmailEdit_Enter(object sender, EventArgs e)
         {
-            
+
             if (txtEmailEdit.Text == CurentUser.Email.ToString())
             {
                 txtEmailEdit.Text = "";
@@ -122,7 +123,7 @@ namespace ModernUI
 
         private void txtEmailEdit_Leave(object sender, EventArgs e)
         {
-            
+
             if (txtEmailEdit.Text == "")
             {
                 txtEmailEdit.Text = CurentUser.Email.ToString();
@@ -144,5 +145,53 @@ namespace ModernUI
             txtPasswordConfEdit.UseSystemPasswordChar = true;
         }
 
+        private void btnShowEditPanel_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = !panel1.Visible;
+        }
+
+        private void btnEditUserDataSave_Click(object sender, EventArgs e)
+        {
+            using (CompanyDBEntities db = new CompanyDBEntities())
+            {
+                //Checking for that same UserName
+                if (db.tblUser.Any(x => x.UserName.Equals(txtUserNameEdit.Text)))
+                {
+                    //wyswietli ten czerwony prostokąt
+                    MessageBox.Show("XD", "User is locked");
+                }
+
+                //Checking password
+                if (txtPasswordEdit.Text != txtPasswordConfEdit.Text)
+                {
+                    //wyswietli ten czerwony prostokąt
+                    MessageBox.Show("XD", "Password !=");
+                }
+
+
+                int id = this.CurentUser.UserId;
+                //replacing data
+                //tblUser userDTO = new tblUser()
+
+                this.CurentUser.UserName = txtUserNameEdit.Text;
+                this.CurentUser.FirstName = txtFirstNameEdit.Text;
+                this.CurentUser.LastName = txtLastNameEdit.Text;
+                this.CurentUser.Email = txtEmailEdit.Text;
+                this.CurentUser.Password = txtPasswordConfEdit.Text;
+
+                this.CurentUser.Position = "User";
+                this.CurentUser.GenderId = 1;
+                this.CurentUser.Age = 24;
+                this.CurentUser.Role = "User";
+
+
+
+                 db.Entry(this.CurentUser).State = EntityState.Modified;
+                db.SaveChanges();
+
+                //ten zielony komunikat
+                MessageBox.Show("XD", "Edit succes ");
+            }
+        }
     }
 }
