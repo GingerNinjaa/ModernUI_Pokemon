@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="CompanyDBDataSet1" targetNamespace="http://tempuri.org/CompanyDBDataSet1.xsd" xmlns:mstns="http://tempuri.org/CompanyDBDataSet1.xsd" xmlns="http://tempuri.org/CompanyDBDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="CompanyDBDataSet_Products" targetNamespace="http://tempuri.org/CompanyDBDataSet_Products.xsd" xmlns:mstns="http://tempuri.org/CompanyDBDataSet_Products.xsd" xmlns="http://tempuri.org/CompanyDBDataSet_Products.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -73,7 +73,7 @@ SELECT ProductId, Name, Description, Price, CategoryName, ImageName FROM tblProd
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="CompanyDBDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CompanyDBDataSet1" msprop:Generator_UserDSName="CompanyDBDataSet1">
+  <xs:element name="CompanyDBDataSet_Products" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CompanyDBDataSet_Products" msprop:Generator_UserDSName="CompanyDBDataSet_Products">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="tblProducts" msprop:Generator_TableClassName="tblProductsDataTable" msprop:Generator_TableVarName="tabletblProducts" msprop:Generator_TablePropName="tblProducts" msprop:Generator_RowDeletingName="tblProductsRowDeleting" msprop:Generator_RowChangingName="tblProductsRowChanging" msprop:Generator_RowEvHandlerName="tblProductsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblProductsRowDeleted" msprop:Generator_UserTableName="tblProducts" msprop:Generator_RowChangedName="tblProductsRowChanged" msprop:Generator_RowEvArgName="tblProductsRowChangeEvent" msprop:Generator_RowClassName="tblProductsRow">

@@ -79,10 +79,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CompanyDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CompanyDBDataSet_Category.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CompanyDBDataSet_Category.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyDBDataSet_Products.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDBDataSet_Products.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyDBDataSet_Users.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDBDataSet_Users.xsd</DependentUpon>
     </Compile>
     <Compile Include="Data\CompanyDB.Context.cs">
       <AutoGen>True</AutoGen>
@@ -99,20 +114,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CompanyDB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Data\CompanyDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
+    <Compile Include="Forms\Administration\AllEmployee.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\CompanyDBDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CompanyDBDataSet1.xsd</DependentUpon>
+    <Compile Include="Forms\Administration\AllEmployee.Designer.cs">
+      <DependentUpon>AllEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\CompanyDBDataSet_AllProduct.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CompanyDBDataSet_AllProduct.xsd</DependentUpon>
+    <Compile Include="Forms\Administration\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -126,11 +138,11 @@
     <Compile Include="Forms\MainBoard.Designer.cs">
       <DependentUpon>MainBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Employee\ShowEmployee.cs">
+    <Compile Include="Forms\Administration\AdminArea.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Employee\ShowEmployee.Designer.cs">
-      <DependentUpon>ShowEmployee.cs</DependentUpon>
+    <Compile Include="Forms\Administration\AdminArea.Designer.cs">
+      <DependentUpon>AdminArea.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\User.cs">
       <SubType>Form</SubType>
@@ -168,14 +180,20 @@
       <DependentUpon>CompanyDB.tt</DependentUpon>
     </Compile>
     <Compile Include="UserDTO.cs" />
+    <EmbeddedResource Include="Forms\Administration\AllEmployee.resx">
+      <DependentUpon>AllEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administration\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainBoard.resx">
       <DependentUpon>MainBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Employee\ShowEmployee.resx">
-      <DependentUpon>ShowEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Administration\AdminArea.resx">
+      <DependentUpon>AdminArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\User.resx">
       <DependentUpon>User.cs</DependentUpon>
@@ -210,6 +228,17 @@
     <None Include="CompanyDBDataSet.xss">
       <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="CompanyDBDataSet1.xsc">
+      <DependentUpon>CompanyDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CompanyDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanyDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompanyDBDataSet1.xss">
+      <DependentUpon>CompanyDBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="CompanyDBDataSet_Category.xsc">
       <DependentUpon>CompanyDBDataSet_Category.xsd</DependentUpon>
     </None>
@@ -221,41 +250,30 @@
     <None Include="CompanyDBDataSet_Category.xss">
       <DependentUpon>CompanyDBDataSet_Category.xsd</DependentUpon>
     </None>
+    <None Include="CompanyDBDataSet_Products.xsc">
+      <DependentUpon>CompanyDBDataSet_Products.xsd</DependentUpon>
+    </None>
+    <None Include="CompanyDBDataSet_Products.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanyDBDataSet_Products.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompanyDBDataSet_Products.xss">
+      <DependentUpon>CompanyDBDataSet_Products.xsd</DependentUpon>
+    </None>
+    <None Include="CompanyDBDataSet_Users.xsc">
+      <DependentUpon>CompanyDBDataSet_Users.xsd</DependentUpon>
+    </None>
+    <None Include="CompanyDBDataSet_Users.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanyDBDataSet_Users.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompanyDBDataSet_Users.xss">
+      <DependentUpon>CompanyDBDataSet_Users.xsd</DependentUpon>
+    </None>
     <None Include="Data\CompanyDB.edmx.diagram">
       <DependentUpon>CompanyDB.edmx</DependentUpon>
-    </None>
-    <None Include="Data\CompanyDBDataSet.xsc">
-      <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Data\CompanyDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CompanyDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Data\CompanyDBDataSet.xss">
-      <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Data\CompanyDBDataSet1.xsc">
-      <DependentUpon>CompanyDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Data\CompanyDBDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CompanyDBDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Data\CompanyDBDataSet1.xss">
-      <DependentUpon>CompanyDBDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Data\CompanyDBDataSet_AllProduct.xsc">
-      <DependentUpon>CompanyDBDataSet_AllProduct.xsd</DependentUpon>
-    </None>
-    <None Include="Data\CompanyDBDataSet_AllProduct.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CompanyDBDataSet_AllProduct.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Data\CompanyDBDataSet_AllProduct.xss">
-      <DependentUpon>CompanyDBDataSet_AllProduct.xsd</DependentUpon>
     </None>
     <None Include="Data\CompanyDB.bacpac" />
     <None Include="packages.config" />

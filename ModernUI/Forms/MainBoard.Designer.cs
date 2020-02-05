@@ -38,7 +38,7 @@
             this.btnAddStock = new System.Windows.Forms.Button();
             this.btnShowStock = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
-            this.btnEmployee = new System.Windows.Forms.Button();
+            this.btnAdministration = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
@@ -60,7 +60,7 @@
             this.panelSideMenu.Controls.Add(this.btnUser);
             this.panelSideMenu.Controls.Add(this.panelPlaylistSubmenu);
             this.panelSideMenu.Controls.Add(this.btnStock);
-            this.panelSideMenu.Controls.Add(this.btnEmployee);
+            this.panelSideMenu.Controls.Add(this.btnAdministration);
             this.panelSideMenu.Controls.Add(this.panelLogo);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
@@ -206,24 +206,24 @@
             this.btnStock.UseVisualStyleBackColor = false;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
-            // btnEmployee
+            // btnAdministration
             // 
-            this.btnEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmployee.FlatAppearance.BorderSize = 0;
-            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnEmployee.ForeColor = System.Drawing.Color.Honeydew;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 245);
-            this.btnEmployee.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
-            this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Padding = new System.Windows.Forms.Padding(10, 15, 0, 0);
-            this.btnEmployee.Size = new System.Drawing.Size(250, 68);
-            this.btnEmployee.TabIndex = 1;
-            this.btnEmployee.Text = "Pracownicy";
-            this.btnEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.UseVisualStyleBackColor = false;
-            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
+            this.btnAdministration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnAdministration.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdministration.FlatAppearance.BorderSize = 0;
+            this.btnAdministration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdministration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAdministration.ForeColor = System.Drawing.Color.Honeydew;
+            this.btnAdministration.Location = new System.Drawing.Point(0, 245);
+            this.btnAdministration.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.btnAdministration.Name = "btnAdministration";
+            this.btnAdministration.Padding = new System.Windows.Forms.Padding(10, 15, 0, 0);
+            this.btnAdministration.Size = new System.Drawing.Size(250, 68);
+            this.btnAdministration.TabIndex = 1;
+            this.btnAdministration.Text = "Administration";
+            this.btnAdministration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdministration.UseVisualStyleBackColor = false;
+            this.btnAdministration.Click += new System.EventHandler(this.btnAdministration_Click);
             // 
             // panelLogo
             // 
@@ -275,7 +275,6 @@
             this.ClientSize = new System.Drawing.Size(1334, 761);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelSideMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimumSize = new System.Drawing.Size(1350, 800);
             this.Name = "MainBoard";
             this.Text = "Form1";
@@ -299,7 +298,7 @@
         private System.Windows.Forms.Button btnAddStock;
         private System.Windows.Forms.Button btnShowStock;
         private System.Windows.Forms.Button btnStock;
-        private System.Windows.Forms.Button btnEmployee;
+        private System.Windows.Forms.Button btnAdministration;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;

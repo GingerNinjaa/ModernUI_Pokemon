@@ -1,5 +1,4 @@
-﻿using ModernUI.Forms.Employee;
-using ModernUI.Forms.Stock;
+﻿using ModernUI.Forms.Stock;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ModernUI.Data;
+using ModernUI.Forms.Administration;
 
 namespace ModernUI
 {
@@ -23,6 +23,11 @@ namespace ModernUI
 
             InitializeComponent();
             customizeDesing();
+
+            if (CurentUser.Role.Trim() != "Admin")
+            {
+                btnAdministration.Enabled = false;
+            }
         }
 
         /*
@@ -46,11 +51,6 @@ namespace ModernUI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         */
-
-
-
-
-
         private void customizeDesing()
         {
             // chowamy submenu
@@ -85,13 +85,6 @@ namespace ModernUI
                 subMenu.Visible = false;
             }
         }
-
-        private void btnEmployee_Click(object sender, EventArgs e)
-        {
-            openChildForm(new ShowEmployee());
-          
-        }
-
 
         private void btnStock_Click(object sender, EventArgs e)
         {
@@ -164,11 +157,6 @@ namespace ModernUI
             openChildForm(new User(CurentUser));
         }
 
-        private void btnDeleteEmplayee_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnHelp_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.dlewandowski.pl");
@@ -196,8 +184,11 @@ namespace ModernUI
             System.Windows.Forms.Application.Exit();
         }
 
+        private void btnAdministration_Click(object sender, EventArgs e)
+        {
 
+            openChildForm(new AdminArea());
+        }
 
-   
     }
 }

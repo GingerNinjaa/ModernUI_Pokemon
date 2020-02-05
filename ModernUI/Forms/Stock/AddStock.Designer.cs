@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddProductClear = new System.Windows.Forms.Button();
             this.btnAddArticle = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,25 +41,26 @@
             this.txtAddProductDescription = new System.Windows.Forms.TextBox();
             this.txtAddProductPrice = new System.Windows.Forms.TextBox();
             this.cbAddProductCategory = new System.Windows.Forms.ComboBox();
-            this.companyDBDataSet_Category = new ModernUI.CompanyDBDataSet_Category();
             this.tblCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.companyDBDataSet_Category = new ModernUI.CompanyDBDataSet_Category();
             this.tblCategoryTableAdapter = new ModernUI.CompanyDBDataSet_CategoryTableAdapters.tblCategoryTableAdapter();
             this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Category)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCategoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Category)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAddProductClear
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(424, 497);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 57);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAddProductClear.BackColor = System.Drawing.Color.DimGray;
+            this.btnAddProductClear.FlatAppearance.BorderSize = 0;
+            this.btnAddProductClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProductClear.Location = new System.Drawing.Point(424, 497);
+            this.btnAddProductClear.Name = "btnAddProductClear";
+            this.btnAddProductClear.Size = new System.Drawing.Size(167, 57);
+            this.btnAddProductClear.TabIndex = 1;
+            this.btnAddProductClear.Text = "Clear";
+            this.btnAddProductClear.UseVisualStyleBackColor = false;
+            this.btnAddProductClear.Click += new System.EventHandler(this.btnAddProductClear_Click);
             // 
             // btnAddArticle
             // 
@@ -70,7 +71,7 @@
             this.btnAddArticle.Name = "btnAddArticle";
             this.btnAddArticle.Size = new System.Drawing.Size(167, 57);
             this.btnAddArticle.TabIndex = 2;
-            this.btnAddArticle.Text = "button2";
+            this.btnAddArticle.Text = "Add Article";
             this.btnAddArticle.UseVisualStyleBackColor = false;
             this.btnAddArticle.Click += new System.EventHandler(this.btnAddArticle_Click);
             // 
@@ -184,15 +185,15 @@
             this.cbAddProductCategory.TabIndex = 31;
             this.cbAddProductCategory.ValueMember = "CategoryName";
             // 
-            // companyDBDataSet_Category
-            // 
-            this.companyDBDataSet_Category.DataSetName = "CompanyDBDataSet_Category";
-            this.companyDBDataSet_Category.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tblCategoryBindingSource
             // 
             this.tblCategoryBindingSource.DataMember = "tblCategory";
             this.tblCategoryBindingSource.DataSource = this.companyDBDataSet_Category;
+            // 
+            // companyDBDataSet_Category
+            // 
+            this.companyDBDataSet_Category.DataSetName = "CompanyDBDataSet_Category";
+            this.companyDBDataSet_Category.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblCategoryTableAdapter
             // 
@@ -229,22 +230,22 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnAddArticle);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAddProductClear);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddStock";
             this.Opacity = 0.9D;
             this.Text = "AddStock";
             this.Load += new System.EventHandler(this.AddStock_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddStock_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Category)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCategoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Category)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddProductClear;
         private System.Windows.Forms.Button btnAddArticle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

@@ -80,5 +80,13 @@ namespace ModernUI.Forms.Stock
                 db.SaveChanges();
             }
         }
+
+        private void btnAddProductClear_Click(object sender, EventArgs e)
+        {
+            txtAddProductName.Text = "";
+            txtAddProductDescription.Text = "";
+            txtAddProductPrice.Text = "";
+            cbAddProductCategory.Text = "";
+        }
     }
 }
