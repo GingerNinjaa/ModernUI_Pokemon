@@ -20,9 +20,9 @@ namespace ModernUI {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CompanyDBDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("CompanyDBDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CompanyDBDataSet : global::System.Data.DataSet {
+    public partial class CompanyDBDataSet1 : global::System.Data.DataSet {
         
         private tblProductsDataTable tabletblProducts;
         
@@ -30,7 +30,7 @@ namespace ModernUI {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public CompanyDBDataSet() {
+        public CompanyDBDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace ModernUI {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected CompanyDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CompanyDBDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace ModernUI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CompanyDBDataSet cln = ((CompanyDBDataSet)(base.Clone()));
+            CompanyDBDataSet1 cln = ((CompanyDBDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace ModernUI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CompanyDBDataSet";
+            this.DataSetName = "CompanyDBDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CompanyDBDataSet.xsd";
+            this.Namespace = "http://tempuri.org/CompanyDBDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tabletblProducts = new tblProductsDataTable();
@@ -225,7 +225,7 @@ namespace ModernUI {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CompanyDBDataSet ds = new CompanyDBDataSet();
+            CompanyDBDataSet1 ds = new CompanyDBDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -289,7 +289,7 @@ namespace ModernUI {
             
             private global::System.Data.DataColumn columnCategoryName;
             
-            private global::System.Data.DataColumn columnQRCode;
+            private global::System.Data.DataColumn columnImageName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -366,9 +366,9 @@ namespace ModernUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn QRCodeColumn {
+            public global::System.Data.DataColumn ImageNameColumn {
                 get {
-                    return this.columnQRCode;
+                    return this.columnImageName;
                 }
             }
             
@@ -409,15 +409,15 @@ namespace ModernUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tblProductsRow AddtblProductsRow(string ProductId, string Name, string Description, decimal Price, string CategoryName, string QRCode) {
+            public tblProductsRow AddtblProductsRow(string Name, string Description, decimal Price, string CategoryName, string ImageName) {
                 tblProductsRow rowtblProductsRow = ((tblProductsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ProductId,
+                        null,
                         Name,
                         Description,
                         Price,
                         CategoryName,
-                        QRCode};
+                        ImageName};
                 rowtblProductsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblProductsRow);
                 return rowtblProductsRow;
@@ -425,7 +425,7 @@ namespace ModernUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tblProductsRow FindByProductId(string ProductId) {
+            public tblProductsRow FindByProductId(int ProductId) {
                 return ((tblProductsRow)(this.Rows.Find(new object[] {
                             ProductId})));
             }
@@ -452,13 +452,13 @@ namespace ModernUI {
                 this.columnDescription = base.Columns["Description"];
                 this.columnPrice = base.Columns["Price"];
                 this.columnCategoryName = base.Columns["CategoryName"];
-                this.columnQRCode = base.Columns["QRCode"];
+                this.columnImageName = base.Columns["ImageName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnProductId = new global::System.Data.DataColumn("ProductId", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnProductId = new global::System.Data.DataColumn("ProductId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProductId);
                 this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName);
@@ -468,17 +468,20 @@ namespace ModernUI {
                 base.Columns.Add(this.columnPrice);
                 this.columnCategoryName = new global::System.Data.DataColumn("CategoryName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCategoryName);
-                this.columnQRCode = new global::System.Data.DataColumn("QRCode", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQRCode);
+                this.columnImageName = new global::System.Data.DataColumn("ImageName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImageName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnProductId}, true));
+                this.columnProductId.AutoIncrement = true;
+                this.columnProductId.AutoIncrementSeed = -1;
+                this.columnProductId.AutoIncrementStep = -1;
                 this.columnProductId.AllowDBNull = false;
+                this.columnProductId.ReadOnly = true;
                 this.columnProductId.Unique = true;
-                this.columnProductId.MaxLength = 10;
                 this.columnName.MaxLength = 2147483647;
                 this.columnDescription.MaxLength = 2147483647;
                 this.columnCategoryName.MaxLength = 2147483647;
-                this.columnQRCode.MaxLength = 2147483647;
+                this.columnImageName.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -546,7 +549,7 @@ namespace ModernUI {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CompanyDBDataSet ds = new CompanyDBDataSet();
+                CompanyDBDataSet1 ds = new CompanyDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -621,9 +624,9 @@ namespace ModernUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string ProductId {
+            public int ProductId {
                 get {
-                    return ((string)(this[this.tabletblProducts.ProductIdColumn]));
+                    return ((int)(this[this.tabletblProducts.ProductIdColumn]));
                 }
                 set {
                     this[this.tabletblProducts.ProductIdColumn] = value;
@@ -696,17 +699,17 @@ namespace ModernUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string QRCode {
+            public string ImageName {
                 get {
                     try {
-                        return ((string)(this[this.tabletblProducts.QRCodeColumn]));
+                        return ((string)(this[this.tabletblProducts.ImageNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'QRCode\' w tabeli \'tblProducts\' to DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Wartość z kolumny \'ImageName\' w tabeli \'tblProducts\' to DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletblProducts.QRCodeColumn] = value;
+                    this[this.tabletblProducts.ImageNameColumn] = value;
                 }
             }
             
@@ -760,14 +763,14 @@ namespace ModernUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsQRCodeNull() {
-                return this.IsNull(this.tabletblProducts.QRCodeColumn);
+            public bool IsImageNameNull() {
+                return this.IsNull(this.tabletblProducts.ImageNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetQRCodeNull() {
-                this[this.tabletblProducts.QRCodeColumn] = global::System.Convert.DBNull;
+            public void SetImageNameNull() {
+                this[this.tabletblProducts.ImageNameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -806,7 +809,7 @@ namespace ModernUI {
         }
     }
 }
-namespace ModernUI.CompanyDBDataSetTableAdapters {
+namespace ModernUI.CompanyDBDataSet1TableAdapters {
     
     
     /// <summary>
@@ -935,41 +938,40 @@ namespace ModernUI.CompanyDBDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Description", "Description");
             tableMapping.ColumnMappings.Add("Price", "Price");
             tableMapping.ColumnMappings.Add("CategoryName", "CategoryName");
-            tableMapping.ColumnMappings.Add("QRCode", "QRCode");
+            tableMapping.ColumnMappings.Add("ImageName", "ImageName");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tblProducts] WHERE (([ProductId] = @Original_ProductId) AND ((" +
                 "@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductId", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblProducts] ([ProductId], [Name], [Description], [Price], [CategoryName], [QRCode]) VALUES (@ProductId, @Name, @Description, @Price, @CategoryName, @QRCode);
-SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProducts WHERE (ProductId = @ProductId)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblProducts] ([Name], [Description], [Price], [CategoryName], [ImageName]) VALUES (@Name, @Description, @Price, @CategoryName, @ImageName);
+SELECT ProductId, Name, Description, Price, CategoryName, ImageName FROM tblProducts WHERE (ProductId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductId", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CategoryName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CategoryName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QRCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QRCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ImageName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImageName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblProducts] SET [ProductId] = @ProductId, [Name] = @Name, [Description] = @Description, [Price] = @Price, [CategoryName] = @CategoryName, [QRCode] = @QRCode WHERE (([ProductId] = @Original_ProductId) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)));
-SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProducts WHERE (ProductId = @ProductId)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblProducts] SET [Name] = @Name, [Description] = @Description, [Price] = @Price, [CategoryName] = @CategoryName, [ImageName] = @ImageName WHERE (([ProductId] = @Original_ProductId) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)));
+SELECT ProductId, Name, Description, Price, CategoryName, ImageName FROM tblProducts WHERE (ProductId = @ProductId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductId", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CategoryName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CategoryName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QRCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QRCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductId", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ImageName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImageName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProductId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProductId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProductId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProductId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -985,8 +987,8 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM dbo.tblProd" +
-                "ucts";
+            this._commandCollection[0].CommandText = "SELECT ProductId, Name, Description, Price, CategoryName, ImageName FROM dbo.tblP" +
+                "roducts";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -994,7 +996,7 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CompanyDBDataSet.tblProductsDataTable dataTable) {
+        public virtual int Fill(CompanyDBDataSet1.tblProductsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1007,9 +1009,9 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CompanyDBDataSet.tblProductsDataTable GetData() {
+        public virtual CompanyDBDataSet1.tblProductsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            CompanyDBDataSet.tblProductsDataTable dataTable = new CompanyDBDataSet.tblProductsDataTable();
+            CompanyDBDataSet1.tblProductsDataTable dataTable = new CompanyDBDataSet1.tblProductsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1017,14 +1019,14 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CompanyDBDataSet.tblProductsDataTable dataTable) {
+        public virtual int Update(CompanyDBDataSet1.tblProductsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CompanyDBDataSet dataSet) {
+        public virtual int Update(CompanyDBDataSet1 dataSet) {
             return this.Adapter.Update(dataSet, "tblProducts");
         }
         
@@ -1047,13 +1049,8 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_ProductId, global::System.Nullable<decimal> Original_Price) {
-            if ((Original_ProductId == null)) {
-                throw new global::System.ArgumentNullException("Original_ProductId");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_ProductId));
-            }
+        public virtual int Delete(int Original_ProductId, global::System.Nullable<decimal> Original_Price) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ProductId));
             if ((Original_Price.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_Price.Value));
@@ -1082,42 +1079,36 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ProductId, string Name, string Description, global::System.Nullable<decimal> Price, string CategoryName, string QRCode) {
-            if ((ProductId == null)) {
-                throw new global::System.ArgumentNullException("ProductId");
+        public virtual int Insert(string Name, string Description, global::System.Nullable<decimal> Price, string CategoryName, string ImageName) {
+            if ((Name == null)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ProductId));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name));
             }
-            if ((Name == null)) {
+            if ((Description == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Name));
-            }
-            if ((Description == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Description));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Description));
             }
             if ((Price.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(Price.Value));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(Price.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((CategoryName == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CategoryName));
+            }
+            if ((ImageName == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(CategoryName));
-            }
-            if ((QRCode == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(QRCode));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(ImageName));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1139,57 +1130,47 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ProductId, string Name, string Description, global::System.Nullable<decimal> Price, string CategoryName, string QRCode, string Original_ProductId, global::System.Nullable<decimal> Original_Price) {
-            if ((ProductId == null)) {
-                throw new global::System.ArgumentNullException("ProductId");
+        public virtual int Update(string Name, string Description, global::System.Nullable<decimal> Price, string CategoryName, string ImageName, int Original_ProductId, global::System.Nullable<decimal> Original_Price, int ProductId) {
+            if ((Name == null)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ProductId));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name));
             }
-            if ((Name == null)) {
+            if ((Description == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Name));
-            }
-            if ((Description == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Description));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Description));
             }
             if ((Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Price.Value));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(Price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((CategoryName == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(CategoryName));
+            }
+            if ((ImageName == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(CategoryName));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(ImageName));
             }
-            if ((QRCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(QRCode));
-            }
-            if ((Original_ProductId == null)) {
-                throw new global::System.ArgumentNullException("Original_ProductId");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_ProductId));
-            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ProductId));
             if ((Original_Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_Price.Value));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_Price.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(ProductId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1210,8 +1191,8 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, string Description, global::System.Nullable<decimal> Price, string CategoryName, string QRCode, string Original_ProductId, global::System.Nullable<decimal> Original_Price) {
-            return this.Update(Original_ProductId, Name, Description, Price, CategoryName, QRCode, Original_ProductId, Original_Price);
+        public virtual int Update(string Name, string Description, global::System.Nullable<decimal> Price, string CategoryName, string ImageName, int Original_ProductId, global::System.Nullable<decimal> Original_Price) {
+            return this.Update(Name, Description, Price, CategoryName, ImageName, Original_ProductId, Original_Price, Original_ProductId);
         }
     }
     
@@ -1306,7 +1287,7 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(CompanyDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(CompanyDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tblProductsTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tblProducts.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1325,7 +1306,7 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(CompanyDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(CompanyDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._tblProductsTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tblProducts.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1343,7 +1324,7 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(CompanyDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(CompanyDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._tblProductsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tblProducts.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1385,7 +1366,7 @@ SELECT ProductId, Name, Description, Price, CategoryName, QRCode FROM tblProduct
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(CompanyDBDataSet dataSet) {
+        public virtual int UpdateAll(CompanyDBDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

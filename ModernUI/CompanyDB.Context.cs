@@ -25,8 +25,8 @@ namespace ModernUI
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tblCategory> tblCategory { get; set; }
-        public virtual DbSet<tblGender> tblGender { get; set; }
         public virtual DbSet<tblProducts> tblProducts { get; set; }
         public virtual DbSet<tblRole> tblRole { get; set; }
         public virtual DbSet<tblUser> tblUser { get; set; }

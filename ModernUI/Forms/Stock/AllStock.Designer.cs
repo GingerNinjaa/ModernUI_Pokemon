@@ -29,22 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGoBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.companyDBDataSet = new ModernUI.CompanyDBDataSet();
+            this.companyDBDataSet1 = new ModernUI.CompanyDBDataSet1();
             this.tblProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblProductsTableAdapter = new ModernUI.CompanyDBDataSetTableAdapters.tblProductsTableAdapter();
+            this.tblProductsTableAdapter = new ModernUI.CompanyDBDataSet1TableAdapters.tblProductsTableAdapter();
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qRCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProductsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +52,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 50);
+            this.panel1.Size = new System.Drawing.Size(1084, 50);
             this.panel1.TabIndex = 0;
             // 
             // btnGoBack
@@ -68,7 +67,10 @@
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productIdDataGridViewTextBoxColumn,
@@ -76,25 +78,23 @@
             this.descriptionDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn,
             this.categoryNameDataGridViewTextBoxColumn,
-            this.categoryIdDataGridViewTextBoxColumn,
-            this.imageNameDataGridViewTextBoxColumn,
-            this.qRCodeDataGridViewTextBoxColumn});
+            this.imageNameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tblProductsBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(1084, 711);
             this.dataGridView1.TabIndex = 2;
             // 
-            // companyDBDataSet
+            // companyDBDataSet1
             // 
-            this.companyDBDataSet.DataSetName = "CompanyDBDataSet";
-            this.companyDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.companyDBDataSet1.DataSetName = "CompanyDBDataSet1";
+            this.companyDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblProductsBindingSource
             // 
             this.tblProductsBindingSource.DataMember = "tblProducts";
-            this.tblProductsBindingSource.DataSource = this.companyDBDataSet;
+            this.tblProductsBindingSource.DataSource = this.companyDBDataSet1;
             // 
             // tblProductsTableAdapter
             // 
@@ -106,6 +106,7 @@
             this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
             this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
             this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
+            this.productIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -135,14 +136,6 @@
             this.categoryNameDataGridViewTextBoxColumn.HeaderText = "CategoryName";
             this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
             // 
-            // categoryIdDataGridViewTextBoxColumn
-            // 
-            this.categoryIdDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.categoryIdDataGridViewTextBoxColumn.DataPropertyName = "CategoryId";
-            this.categoryIdDataGridViewTextBoxColumn.HeaderText = "CategoryId";
-            this.categoryIdDataGridViewTextBoxColumn.Name = "categoryIdDataGridViewTextBoxColumn";
-            this.categoryIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // imageNameDataGridViewTextBoxColumn
             // 
             this.imageNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -150,18 +143,11 @@
             this.imageNameDataGridViewTextBoxColumn.HeaderText = "ImageName";
             this.imageNameDataGridViewTextBoxColumn.Name = "imageNameDataGridViewTextBoxColumn";
             // 
-            // qRCodeDataGridViewTextBoxColumn
-            // 
-            this.qRCodeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.qRCodeDataGridViewTextBoxColumn.DataPropertyName = "QRCode";
-            this.qRCodeDataGridViewTextBoxColumn.HeaderText = "QRCode";
-            this.qRCodeDataGridViewTextBoxColumn.Name = "qRCodeDataGridViewTextBoxColumn";
-            // 
             // AllStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1084, 761);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnGoBack);
             this.Controls.Add(this.panel1);
@@ -170,7 +156,7 @@
             this.Text = "AllStock";
             this.Load += new System.EventHandler(this.AllStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProductsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -181,16 +167,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnGoBack;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private CompanyDBDataSet companyDBDataSet;
+        private CompanyDBDataSet1 companyDBDataSet1;
         private System.Windows.Forms.BindingSource tblProductsBindingSource;
-        private CompanyDBDataSetTableAdapters.tblProductsTableAdapter tblProductsTableAdapter;
+        private CompanyDBDataSet1TableAdapters.tblProductsTableAdapter tblProductsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imageNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qRCodeDataGridViewTextBoxColumn;
+        // private CompanyDBDataSetTableAdapters.tblProductsTableAdapter tblProductsTableAdapter;
     }
 }

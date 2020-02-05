@@ -14,15 +14,11 @@ namespace ModernUI
     
     public partial class tblProducts
     {
-        public string ProductId { get; set; }
+        public int ProductId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public Nullable<decimal> Price { get; set; }
         public string CategoryName { get; set; }
-        public int CategoryId { get; set; }
         public string ImageName { get; set; }
-        public string QRCode { get; set; }
-    
-        public virtual tblCategory tblCategory { get; set; }
     }
 }

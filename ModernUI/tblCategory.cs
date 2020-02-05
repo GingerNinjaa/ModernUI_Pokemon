@@ -14,16 +14,7 @@ namespace ModernUI
     
     public partial class tblCategory
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblCategory()
-        {
-            this.tblProducts = new HashSet<tblProducts>();
-        }
-    
         public int Id { get; set; }
         public string CategoryName { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblProducts> tblProducts { get; set; }
     }
 }

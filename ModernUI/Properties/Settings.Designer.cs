@@ -33,5 +33,16 @@ namespace ModernUI.Properties {
                 return ((string)(this["CompanyDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PO0600282\\SQLEXPRESS;Initial Catalog=CompanyDB;Integrated Security=Tr" +
+            "ue")]
+        public string CompanyDBConnection_DataGridView_AllStock {
+            get {
+                return ((string)(this["CompanyDBConnection_DataGridView_AllStock"]));
+            }
+        }
     }
 }

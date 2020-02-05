@@ -13,7 +13,7 @@ namespace ModernUI
 {
     public partial class User : Form
     {
-        tblUser CurentUser;
+        tblUser CurentUser = new tblUser();
         public User(tblUser user)
         {
             CurentUser = user;
@@ -152,8 +152,10 @@ namespace ModernUI
 
         private void btnEditUserDataSave_Click(object sender, EventArgs e)
         {
+
             using (CompanyDBEntities db = new CompanyDBEntities())
             {
+
                 //Checking for that same UserName
                 if (db.tblUser.Any(x => x.UserName.Equals(txtUserNameEdit.Text)))
                 {
@@ -168,30 +170,32 @@ namespace ModernUI
                     MessageBox.Show("XD", "Password !=");
                 }
 
+                this.CurentUser.UserId = this.CurentUser.UserId;
+                this.CurentUser.UserName = txtUserNameEdit.Text.Trim();
+                this.CurentUser.FirstName = txtFirstNameEdit.Text.Trim();
+                this.CurentUser.LastName = txtLastNameEdit.Text.Trim();
+                this.CurentUser.Email = txtEmailEdit.Text.Trim();
 
-                int id = this.CurentUser.UserId;
-                //replacing data
-                //tblUser userDTO = new tblUser()
-
-                this.CurentUser.UserName = txtUserNameEdit.Text;
-                this.CurentUser.FirstName = txtFirstNameEdit.Text;
-                this.CurentUser.LastName = txtLastNameEdit.Text;
-                this.CurentUser.Email = txtEmailEdit.Text;
-                this.CurentUser.Password = txtPasswordConfEdit.Text;
-
+                if (txtPasswordEdit.Text != "" && txtPasswordConfEdit.Text != "")
+                {
+                    if (txtPasswordEdit.Text == txtPasswordConfEdit.Text)
+                    {
+                        this.CurentUser.Password = txtPasswordConfEdit.Text.Trim();
+                    }
+                }
+               
+                //if admin
                 this.CurentUser.Position = "User";
-                this.CurentUser.GenderId = 1;
-                this.CurentUser.Age = 24;
                 this.CurentUser.Role = "User";
 
-
-
-                 db.Entry(this.CurentUser).State = EntityState.Modified;
+   
+                db.Entry(CurentUser).State = EntityState.Modified;   
                 db.SaveChanges();
 
                 //ten zielony komunikat
                 MessageBox.Show("XD", "Edit succes ");
             }
+
         }
     }
 }
