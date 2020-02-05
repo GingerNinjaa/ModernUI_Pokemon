@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="CompanyDBDataSet" targetNamespace="http://tempuri.org/CompanyDBDataSet.xsd" xmlns:mstns="http://tempuri.org/CompanyDBDataSet.xsd" xmlns="http://tempuri.org/CompanyDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="CompanyDBDataSet_Category" targetNamespace="http://tempuri.org/CompanyDBDataSet_Category.xsd" xmlns:mstns="http://tempuri.org/CompanyDBDataSet_Category.xsd" xmlns="http://tempuri.org/CompanyDBDataSet_Category.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -57,7 +57,7 @@ SELECT Id, CategoryName FROM tblCategory WHERE (Id = @Id)</CommandText>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="CompanyDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CompanyDBDataSet" msprop:Generator_UserDSName="CompanyDBDataSet">
+  <xs:element name="CompanyDBDataSet_Category" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CompanyDBDataSet_Category" msprop:Generator_UserDSName="CompanyDBDataSet_Category">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="tblCategory" msprop:Generator_TableClassName="tblCategoryDataTable" msprop:Generator_TableVarName="tabletblCategory" msprop:Generator_TablePropName="tblCategory" msprop:Generator_RowDeletingName="tblCategoryRowDeleting" msprop:Generator_RowChangingName="tblCategoryRowChanging" msprop:Generator_RowEvHandlerName="tblCategoryRowChangeEventHandler" msprop:Generator_RowDeletedName="tblCategoryRowDeleted" msprop:Generator_UserTableName="tblCategory" msprop:Generator_RowChangedName="tblCategoryRowChanged" msprop:Generator_RowEvArgName="tblCategoryRowChangeEvent" msprop:Generator_RowClassName="tblCategoryRow">

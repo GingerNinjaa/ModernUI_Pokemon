@@ -74,32 +74,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompanyDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CompanyDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CompanyDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CompanyDB.edmx</DependentUpon>
-    </Compile>
     <Compile Include="CompanyDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CompanyDBDataSet1.Designer.cs">
+    <Compile Include="CompanyDBDataSet_Category.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDBDataSet_Category.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CompanyDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CompanyDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CompanyDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CompanyDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CompanyDBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CompanyDBDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CompanyDBDataSet_AllProduct.Designer.cs">
+    <Compile Include="Data\CompanyDBDataSet_AllProduct.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CompanyDBDataSet_AllProduct.xsd</DependentUpon>
@@ -142,19 +152,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagrams.cs">
+    <Compile Include="Data\sysdiagrams.cs">
       <DependentUpon>CompanyDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblCategory.cs">
+    <Compile Include="Data\tblCategory.cs">
       <DependentUpon>CompanyDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblProducts.cs">
+    <Compile Include="Data\tblProducts.cs">
       <DependentUpon>CompanyDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblRole.cs">
+    <Compile Include="Data\tblRole.cs">
       <DependentUpon>CompanyDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblUser.cs">
+    <Compile Include="Data\tblUser.cs">
       <DependentUpon>CompanyDB.tt</DependentUpon>
     </Compile>
     <Compile Include="UserDTO.cs" />
@@ -185,13 +195,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="CompanyDB.edmx">
+    <EntityDeploy Include="Data\CompanyDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CompanyDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="CompanyDB.edmx.diagram">
-      <DependentUpon>CompanyDB.edmx</DependentUpon>
-    </None>
     <None Include="CompanyDBDataSet.xsc">
       <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
     </None>
@@ -203,26 +210,51 @@
     <None Include="CompanyDBDataSet.xss">
       <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="CompanyDBDataSet1.xsc">
+    <None Include="CompanyDBDataSet_Category.xsc">
+      <DependentUpon>CompanyDBDataSet_Category.xsd</DependentUpon>
+    </None>
+    <None Include="CompanyDBDataSet_Category.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanyDBDataSet_Category.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompanyDBDataSet_Category.xss">
+      <DependentUpon>CompanyDBDataSet_Category.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CompanyDB.edmx.diagram">
+      <DependentUpon>CompanyDB.edmx</DependentUpon>
+    </None>
+    <None Include="Data\CompanyDBDataSet.xsc">
+      <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CompanyDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanyDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CompanyDBDataSet.xss">
+      <DependentUpon>CompanyDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CompanyDBDataSet1.xsc">
       <DependentUpon>CompanyDBDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="CompanyDBDataSet1.xsd">
+    <None Include="Data\CompanyDBDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>CompanyDBDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="CompanyDBDataSet1.xss">
+    <None Include="Data\CompanyDBDataSet1.xss">
       <DependentUpon>CompanyDBDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="CompanyDBDataSet_AllProduct.xsc">
+    <None Include="Data\CompanyDBDataSet_AllProduct.xsc">
       <DependentUpon>CompanyDBDataSet_AllProduct.xsd</DependentUpon>
     </None>
-    <None Include="CompanyDBDataSet_AllProduct.xsd">
+    <None Include="Data\CompanyDBDataSet_AllProduct.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>CompanyDBDataSet_AllProduct.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="CompanyDBDataSet_AllProduct.xss">
+    <None Include="Data\CompanyDBDataSet_AllProduct.xss">
       <DependentUpon>CompanyDBDataSet_AllProduct.xsd</DependentUpon>
     </None>
     <None Include="Data\CompanyDB.bacpac" />
@@ -241,12 +273,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CompanyDB.Context.tt">
+    <Content Include="Data\CompanyDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CompanyDB.edmx</DependentUpon>
       <LastGenOutput>CompanyDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="CompanyDB.tt">
+    <Content Include="Data\CompanyDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CompanyDB.edmx</DependentUpon>
       <LastGenOutput>CompanyDB.cs</LastGenOutput>

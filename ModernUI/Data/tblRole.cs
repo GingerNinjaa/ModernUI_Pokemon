@@ -7,18 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ModernUI
+namespace ModernUI.Data
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class tblProducts
+    public partial class tblRole
     {
-        public int ProductId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public Nullable<decimal> Price { get; set; }
-        public string CategoryName { get; set; }
-        public string ImageName { get; set; }
+        public int Id { get; set; }
+        public string RoleName { get; set; }
     }
 }

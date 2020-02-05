@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ModernUI
+namespace ModernUI.Data
 {
     using System;
     using System.Data.Entity;

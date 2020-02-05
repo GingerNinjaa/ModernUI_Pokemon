@@ -1,4 +1,6 @@
-﻿namespace ModernUI.Forms.Stock
+﻿using ModernUI.Data;
+
+namespace ModernUI.Forms.Stock
 {
     partial class AllStock
     {
@@ -33,9 +35,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGoBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.companyDBDataSet1 = new ModernUI.CompanyDBDataSet1();
+            this.companyDBDataSet1 = new ModernUI.Data.CompanyDBDataSet1();
             this.tblProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblProductsTableAdapter = new ModernUI.CompanyDBDataSet1TableAdapters.tblProductsTableAdapter();
+            this.tblProductsTableAdapter = new ModernUI.Data.CompanyDBDataSet1TableAdapters.tblProductsTableAdapter();
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -169,7 +171,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private CompanyDBDataSet1 companyDBDataSet1;
         private System.Windows.Forms.BindingSource tblProductsBindingSource;
-        private CompanyDBDataSet1TableAdapters.tblProductsTableAdapter tblProductsTableAdapter;
+        private Data.CompanyDBDataSet1TableAdapters.tblProductsTableAdapter tblProductsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;

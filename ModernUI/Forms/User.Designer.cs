@@ -211,7 +211,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(526, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(558, 761);
             this.panel1.TabIndex = 11;
@@ -223,7 +223,7 @@
             this.btnEditUserDataSave.FlatAppearance.BorderSize = 0;
             this.btnEditUserDataSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditUserDataSave.Location = new System.Drawing.Point(307, 673);
-            this.btnEditUserDataSave.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEditUserDataSave.Margin = new System.Windows.Forms.Padding(5);
             this.btnEditUserDataSave.Name = "btnEditUserDataSave";
             this.btnEditUserDataSave.Size = new System.Drawing.Size(167, 57);
             this.btnEditUserDataSave.TabIndex = 26;
@@ -237,7 +237,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(87, 673);
-            this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(167, 57);
             this.button2.TabIndex = 25;
@@ -251,7 +251,7 @@
             this.txtPasswordConfEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtPasswordConfEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtPasswordConfEdit.Location = new System.Drawing.Point(87, 620);
-            this.txtPasswordConfEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPasswordConfEdit.Margin = new System.Windows.Forms.Padding(5);
             this.txtPasswordConfEdit.Name = "txtPasswordConfEdit";
             this.txtPasswordConfEdit.Size = new System.Drawing.Size(387, 27);
             this.txtPasswordConfEdit.TabIndex = 23;
@@ -276,7 +276,7 @@
             this.txtPasswordEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtPasswordEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtPasswordEdit.Location = new System.Drawing.Point(87, 523);
-            this.txtPasswordEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPasswordEdit.Margin = new System.Windows.Forms.Padding(5);
             this.txtPasswordEdit.Name = "txtPasswordEdit";
             this.txtPasswordEdit.Size = new System.Drawing.Size(387, 27);
             this.txtPasswordEdit.TabIndex = 21;
@@ -289,7 +289,7 @@
             this.txtEmailEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtEmailEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtEmailEdit.Location = new System.Drawing.Point(87, 426);
-            this.txtEmailEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEmailEdit.Margin = new System.Windows.Forms.Padding(5);
             this.txtEmailEdit.Name = "txtEmailEdit";
             this.txtEmailEdit.Size = new System.Drawing.Size(387, 27);
             this.txtEmailEdit.TabIndex = 20;
@@ -303,7 +303,7 @@
             this.txtLastNameEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtLastNameEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtLastNameEdit.Location = new System.Drawing.Point(87, 329);
-            this.txtLastNameEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtLastNameEdit.Margin = new System.Windows.Forms.Padding(5);
             this.txtLastNameEdit.Name = "txtLastNameEdit";
             this.txtLastNameEdit.Size = new System.Drawing.Size(387, 27);
             this.txtLastNameEdit.TabIndex = 19;
@@ -317,7 +317,7 @@
             this.txtFirstNameEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtFirstNameEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtFirstNameEdit.Location = new System.Drawing.Point(87, 232);
-            this.txtFirstNameEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtFirstNameEdit.Margin = new System.Windows.Forms.Padding(5);
             this.txtFirstNameEdit.Name = "txtFirstNameEdit";
             this.txtFirstNameEdit.Size = new System.Drawing.Size(387, 27);
             this.txtFirstNameEdit.TabIndex = 18;
@@ -331,7 +331,7 @@
             this.txtUserNameEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.txtUserNameEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtUserNameEdit.Location = new System.Drawing.Point(87, 136);
-            this.txtUserNameEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtUserNameEdit.Margin = new System.Windows.Forms.Padding(5);
             this.txtUserNameEdit.Name = "txtUserNameEdit";
             this.txtUserNameEdit.Size = new System.Drawing.Size(387, 27);
             this.txtUserNameEdit.TabIndex = 17;
@@ -445,7 +445,7 @@
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "User";
             this.Text = "Form3";
             this.panel1.ResumeLayout(false);
