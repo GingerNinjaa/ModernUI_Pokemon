@@ -69,16 +69,28 @@ namespace ModernUI.Forms.Stock
         private void btnAddArticle_Click(object sender, EventArgs e)
         {
             tblProducts model = new tblProducts();
-            using (CompanyDBEntities db = new CompanyDBEntities())
-            {
-                model.Name = txtAddProductName.Text;
-                model.Description = txtAddProductDescription.Text;
-                model.Price = decimal.Parse(txtAddProductPrice.Text);
-                model.CategoryName = cbAddProductCategory.Text;
 
-                db.tblProducts.Add(model);
-                db.SaveChanges();
+            try
+            {
+                using (CompanyDBEntities db = new CompanyDBEntities())
+                {
+                    model.Name = txtAddProductName.Text;
+                    model.Description = txtAddProductDescription.Text;
+                    model.Price = decimal.Parse(txtAddProductPrice.Text);
+                    model.CategoryName = cbAddProductCategory.Text;
+
+                    db.tblProducts.Add(model);
+                    db.SaveChanges();
+                }
+                MessageBox.Show("XD", "OK");
+
             }
+            catch (System.Data.Entity.Validation.DbEntityValidationException)
+            {
+
+                MessageBox.Show("XD", "FAIL");
+            }
+           
         }
 
         private void btnAddProductClear_Click(object sender, EventArgs e)

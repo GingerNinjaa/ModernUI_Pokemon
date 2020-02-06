@@ -22,6 +22,13 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CategoryName" Type="varchar(max)" />
         </EntityType>
+        <EntityType Name="tblPosition">
+          <Key>
+            <PropertyRef Name="PositionId" />
+          </Key>
+          <Property Name="PositionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PositionName" Type="varchar" MaxLength="150" />
+        </EntityType>
         <EntityType Name="tblProducts">
           <Key>
             <PropertyRef Name="ProductId" />
@@ -32,13 +39,6 @@
           <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
           <Property Name="CategoryName" Type="varchar(max)" />
           <Property Name="ImageName" Type="varchar(max)" />
-        </EntityType>
-        <EntityType Name="tblRole">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RoleName" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="tblUser">
           <Key>
@@ -53,12 +53,36 @@
           <Property Name="Password" Type="varchar" MaxLength="100" />
           <Property Name="Role" Type="nchar" MaxLength="10" />
         </EntityType>
+        <EntityType Name="tblUserRole">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_tblUserRole_tblUser">
+          <End Role="tblUser" Type="Self.tblUser" Multiplicity="1" />
+          <End Role="tblUserRole" Type="Self.tblUserRole" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="CompanyDBModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblCategory" EntityType="Self.tblCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblPosition" EntityType="Self.tblPosition" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblProducts" EntityType="Self.tblProducts" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tblRole" EntityType="Self.tblRole" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUserRole" EntityType="Self.tblUserRole" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tblUserRole_tblUser" Association="Self.FK_tblUserRole_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserRole" EntitySet="tblUserRole" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -92,13 +116,6 @@
           <Property Name="CategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="tblRole">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RoleName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-        </EntityType>
         <EntityType Name="tblUser">
           <Key>
             <PropertyRef Name="UserId" />
@@ -111,14 +128,47 @@
           <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Role" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="tblUserRole" Relationship="CompanyDBModel.FK_tblUserRole_tblUser" FromRole="tblUser" ToRole="tblUserRole" />
         </EntityType>
         <EntityContainer Name="CompanyDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="tblCategory" EntityType="Self.tblCategory" />
           <EntitySet Name="tblProducts" EntityType="Self.tblProducts" />
-          <EntitySet Name="tblRole" EntityType="Self.tblRole" />
           <EntitySet Name="tblUser" EntityType="Self.tblUser" />
+          <EntitySet Name="tblPosition" EntityType="CompanyDBModel.tblPosition" />
+          <EntitySet Name="tblUserRole" EntityType="CompanyDBModel.tblUserRole" />
+          <AssociationSet Name="FK_tblUserRole_tblUser" Association="CompanyDBModel.FK_tblUserRole_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserRole" EntitySet="tblUserRole" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="tblPosition">
+          <Key>
+            <PropertyRef Name="PositionId" />
+          </Key>
+          <Property Name="PositionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PositionName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblUserRole">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblUser" Relationship="CompanyDBModel.FK_tblUserRole_tblUser" FromRole="tblUserRole" ToRole="tblUser" />
+        </EntityType>
+        <Association Name="FK_tblUserRole_tblUser">
+          <End Type="CompanyDBModel.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="CompanyDBModel.tblUserRole" Role="tblUserRole" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -156,14 +206,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tblRole">
-            <EntityTypeMapping TypeName="CompanyDBModel.tblRole">
-              <MappingFragment StoreEntitySet="tblRole">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tblUser">
             <EntityTypeMapping TypeName="CompanyDBModel.tblUser">
               <MappingFragment StoreEntitySet="tblUser">
@@ -175,6 +217,22 @@
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Role" ColumnName="Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPosition">
+            <EntityTypeMapping TypeName="CompanyDBModel.tblPosition">
+              <MappingFragment StoreEntitySet="tblPosition">
+                <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+                <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUserRole">
+            <EntityTypeMapping TypeName="CompanyDBModel.tblUserRole">
+              <MappingFragment StoreEntitySet="tblUserRole">
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -58,17 +58,13 @@ namespace ModernUI.Forms.Administration
         {
             using (CompanyDBEntities db = new CompanyDBEntities())
             {
-
-
                 if (db.tblUser.Any(x => x.UserName.Equals(cbAdminPicEmployee.Text)))
                 {
 
                     txtAdminConfirmEmail.Text = db.tblUser.Where(x => x.UserName == cbAdminPicEmployee.Text)
                         .Select(x => x.Email)
                         .FirstOrDefault()
-                        .ToString();
-                       
-                    
+                        .ToString();   
                 }
             }
         }
@@ -76,6 +72,52 @@ namespace ModernUI.Forms.Administration
         private void button1_Click(object sender, EventArgs e)
         {
             test();
+        }
+
+        private void cbAdminPicEmployee_TextChanged(object sender, EventArgs e)
+        {
+            using (CompanyDBEntities db = new CompanyDBEntities())
+            {
+                if (db.tblUser.Any(x => x.UserName.Equals(cbAdminPicEmployee.Text)))
+                {
+
+                    txtAdminConfirmEmail.Text = db.tblUser.Where(x => x.UserName == cbAdminPicEmployee.Text)
+                        .Select(x => x.Email)
+                        .FirstOrDefault()
+                        .ToString();
+                }
+            }
+        }
+
+        private void btnAddArticle_Click(object sender, EventArgs e)
+        {
+            //Changing password of selected user
+
+            using (CompanyDBEntities db = new CompanyDBEntities())
+            {
+                if (txtAdminPassword.Text != txtAdminPasswordConfirm.Text)
+                {
+                    //red popup
+                    MessageBox.Show("xd", "Wrong password");
+                }
+
+                tblUser model = new tblUser()
+                {
+                    
+                    UserId = db.tblUser.Where(x => x.UserName == cbAdminPicEmployee.Text).Select(x => x.UserId).FirstOrDefault(),
+                    UserName = cbAdminPicEmployee.Text, 
+                    Password = txtAdminPassword.Text
+                };
+
+                // zmienić hasło osobie o username i email  
+                db.tblUser.Attach(model);
+                db.Entry(model).Property(x => x.Password).IsModified = true;
+                db.SaveChanges();
+
+                //greenpopup
+                MessageBox.Show("xd", "Password was updated");
+
+            }
         }
     }
 }

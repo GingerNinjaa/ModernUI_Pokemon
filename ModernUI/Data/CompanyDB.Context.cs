@@ -28,7 +28,8 @@ namespace ModernUI.Data
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tblCategory> tblCategory { get; set; }
         public virtual DbSet<tblProducts> tblProducts { get; set; }
-        public virtual DbSet<tblRole> tblRole { get; set; }
         public virtual DbSet<tblUser> tblUser { get; set; }
+        public virtual DbSet<tblPosition> tblPosition { get; set; }
+        public virtual DbSet<tblUserRole> tblUserRole { get; set; }
     }
 }

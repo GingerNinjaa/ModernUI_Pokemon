@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAdminAllEmployee = new System.Windows.Forms.Button();
             this.btnAdminChangePassword = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdminAddEmployee = new System.Windows.Forms.Button();
             this.panelChildFormAdmin = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.panel1.Controls.Add(this.btnAdminAllEmployee);
             this.panel1.Controls.Add(this.btnAdminChangePassword);
             this.panel1.Controls.Add(this.btnGoBack);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnAdminAddEmployee);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
@@ -72,7 +72,7 @@
             // 
             // btnAdminChangePassword
             // 
-            this.btnAdminChangePassword.Location = new System.Drawing.Point(211, 12);
+            this.btnAdminChangePassword.Location = new System.Drawing.Point(411, 12);
             this.btnAdminChangePassword.Name = "btnAdminChangePassword";
             this.btnAdminChangePassword.Size = new System.Drawing.Size(75, 23);
             this.btnAdminChangePassword.TabIndex = 5;
@@ -80,14 +80,15 @@
             this.btnAdminChangePassword.UseVisualStyleBackColor = true;
             this.btnAdminChangePassword.Click += new System.EventHandler(this.btnAdminChangePassword_Click);
             // 
-            // button1
+            // btnAdminAddEmployee
             // 
-            this.button1.Location = new System.Drawing.Point(307, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdminAddEmployee.Location = new System.Drawing.Point(247, 12);
+            this.btnAdminAddEmployee.Name = "btnAdminAddEmployee";
+            this.btnAdminAddEmployee.Size = new System.Drawing.Size(139, 23);
+            this.btnAdminAddEmployee.TabIndex = 4;
+            this.btnAdminAddEmployee.Text = "Add Employee";
+            this.btnAdminAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAdminAddEmployee.Click += new System.EventHandler(this.btnAdminAddEmployee_Click);
             // 
             // panelChildFormAdmin
             // 
@@ -116,7 +117,7 @@
 
         private System.Windows.Forms.Button btnGoBack;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdminAddEmployee;
         private System.Windows.Forms.Button btnAdminChangePassword;
         private System.Windows.Forms.Button btnAdminAllEmployee;
         private System.Windows.Forms.Panel panelChildFormAdmin;

@@ -11,20 +11,12 @@ namespace ModernUI.Data
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
-    public partial class tblProducts
+    
+    public partial class tblUserRole
     {
-        [Key]
-        public int ProductId { get; set; }
-        [Required]
-        public string Name { get; set; }
-        [Required]
-        public string Description { get; set; }
-        [Required]
-        public Nullable<decimal> Price { get; set; }
-        [Required]
-        public string CategoryName { get; set; }
-        public string ImageName { get; set; }
+        public int RoleId { get; set; }
+        public string RoleName { get; set; }
+    
+        public virtual tblUser tblUser { get; set; }
     }
 }

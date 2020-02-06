@@ -84,6 +84,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CompanyDBDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CompanyDBDataSet_ALL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyDBDataSet_ALL.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CompanyDBDataSet_Category.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -113,6 +118,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CompanyDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tblPosition.cs">
+      <DependentUpon>CompanyDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\tblUserRole.cs">
+      <DependentUpon>CompanyDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administration\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Administration\AllEmployee.cs">
       <SubType>Form</SubType>
@@ -173,13 +190,13 @@
     <Compile Include="Data\tblProducts.cs">
       <DependentUpon>CompanyDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\tblRole.cs">
-      <DependentUpon>CompanyDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Data\tblUser.cs">
       <DependentUpon>CompanyDB.tt</DependentUpon>
     </Compile>
     <Compile Include="UserDTO.cs" />
+    <EmbeddedResource Include="Forms\Administration\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Administration\AllEmployee.resx">
       <DependentUpon>AllEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +255,17 @@
     </None>
     <None Include="CompanyDBDataSet1.xss">
       <DependentUpon>CompanyDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CompanyDBDataSet_ALL.xsc">
+      <DependentUpon>CompanyDBDataSet_ALL.xsd</DependentUpon>
+    </None>
+    <None Include="CompanyDBDataSet_ALL.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CompanyDBDataSet_ALL.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CompanyDBDataSet_ALL.xss">
+      <DependentUpon>CompanyDBDataSet_ALL.xsd</DependentUpon>
     </None>
     <None Include="CompanyDBDataSet_Category.xsc">
       <DependentUpon>CompanyDBDataSet_Category.xsd</DependentUpon>

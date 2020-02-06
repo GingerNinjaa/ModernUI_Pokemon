@@ -12,9 +12,9 @@ namespace ModernUI.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class tblRole
+    public partial class tblPosition
     {
-        public int Id { get; set; }
-        public string RoleName { get; set; }
+        public int PositionId { get; set; }
+        public string PositionName { get; set; }
     }
 }

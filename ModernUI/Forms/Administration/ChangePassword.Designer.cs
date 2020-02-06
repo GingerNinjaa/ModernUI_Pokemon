@@ -43,7 +43,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtAdminPassword = new System.Windows.Forms.TextBox();
             this.txtAdminPasswordConfirm = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tblUserBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSetUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Users)).BeginInit();
@@ -77,6 +76,7 @@
             // 
             this.cbAdminPicEmployee.DataSource = this.tblUserBindingSource;
             this.cbAdminPicEmployee.DisplayMember = "UserName";
+            this.cbAdminPicEmployee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdminPicEmployee.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbAdminPicEmployee.FormattingEnabled = true;
             this.cbAdminPicEmployee.Location = new System.Drawing.Point(253, 46);
@@ -84,6 +84,7 @@
             this.cbAdminPicEmployee.Size = new System.Drawing.Size(172, 29);
             this.cbAdminPicEmployee.TabIndex = 16;
             this.cbAdminPicEmployee.ValueMember = "UserName";
+            this.cbAdminPicEmployee.TextChanged += new System.EventHandler(this.cbAdminPicEmployee_TextChanged);
             // 
             // tblUserBindingSource
             // 
@@ -122,8 +123,9 @@
             this.btnAddArticle.Name = "btnAddArticle";
             this.btnAddArticle.Size = new System.Drawing.Size(106, 57);
             this.btnAddArticle.TabIndex = 29;
-            this.btnAddArticle.Text = "Add Article";
+            this.btnAddArticle.Text = "Change password";
             this.btnAddArticle.UseVisualStyleBackColor = false;
+            this.btnAddArticle.Click += new System.EventHandler(this.btnAddArticle_Click);
             // 
             // btnAdminClose
             // 
@@ -180,26 +182,12 @@
             this.txtAdminPasswordConfirm.TabIndex = 37;
             this.txtAdminPasswordConfirm.TextChanged += new System.EventHandler(this.txtAdminPasswordConfirm_TextChanged);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(457, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 57);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "test";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(600, 300);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtAdminPasswordConfirm);
             this.Controls.Add(this.txtAdminPassword);
             this.Controls.Add(this.label4);
@@ -240,6 +228,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAdminPassword;
         private System.Windows.Forms.TextBox txtAdminPasswordConfirm;
-        private System.Windows.Forms.Button button1;
     }
 }

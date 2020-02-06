@@ -49,8 +49,14 @@ namespace ModernUI.Forms.Administration
 
         private void btnAdminChangePassword_Click(object sender, EventArgs e)
         {
-            ChangePassword change = new ChangePassword();
-            change.Show();
+            ChangePassword changePassword = new ChangePassword();
+            changePassword.Show();
+        }
+
+        private void btnAdminAddEmployee_Click(object sender, EventArgs e)
+        {
+            AddEmployee addEmployee = new AddEmployee();
+            addEmployee.Show();
         }
     }
 }
