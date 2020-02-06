@@ -31,21 +31,23 @@ namespace ModernUI.Forms.Stock
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGoBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.companyDBDataSet_Products = new ModernUI.CompanyDBDataSet_Products();
-            this.tblProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblProductsTableAdapter = new ModernUI.CompanyDBDataSet_ProductsTableAdapters.tblProductsTableAdapter();
             this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.companyDBDataSet_Products = new ModernUI.CompanyDBDataSet_Products();
+            this.tblProductsTableAdapter = new ModernUI.CompanyDBDataSet_ProductsTableAdapters.tblProductsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Products)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProductsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Products)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,7 +71,15 @@ namespace ModernUI.Forms.Stock
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productIdDataGridViewTextBoxColumn,
@@ -79,25 +89,21 @@ namespace ModernUI.Forms.Stock
             this.categoryNameDataGridViewTextBoxColumn,
             this.imageNameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tblProductsBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(210)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.Color.Black;
             this.dataGridView1.Location = new System.Drawing.Point(0, 50);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1084, 711);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // companyDBDataSet_Products
-            // 
-            this.companyDBDataSet_Products.DataSetName = "CompanyDBDataSet_Products";
-            this.companyDBDataSet_Products.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblProductsBindingSource
-            // 
-            this.tblProductsBindingSource.DataMember = "tblProducts";
-            this.tblProductsBindingSource.DataSource = this.companyDBDataSet_Products;
-            // 
-            // tblProductsTableAdapter
-            // 
-            this.tblProductsTableAdapter.ClearBeforeFill = true;
             // 
             // productIdDataGridViewTextBoxColumn
             // 
@@ -113,6 +119,7 @@ namespace ModernUI.Forms.Stock
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
@@ -120,6 +127,7 @@ namespace ModernUI.Forms.Stock
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // priceDataGridViewTextBoxColumn
             // 
@@ -127,6 +135,7 @@ namespace ModernUI.Forms.Stock
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // categoryNameDataGridViewTextBoxColumn
             // 
@@ -134,6 +143,7 @@ namespace ModernUI.Forms.Stock
             this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "CategoryName";
             this.categoryNameDataGridViewTextBoxColumn.HeaderText = "CategoryName";
             this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
+            this.categoryNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // imageNameDataGridViewTextBoxColumn
             // 
@@ -141,6 +151,21 @@ namespace ModernUI.Forms.Stock
             this.imageNameDataGridViewTextBoxColumn.DataPropertyName = "ImageName";
             this.imageNameDataGridViewTextBoxColumn.HeaderText = "ImageName";
             this.imageNameDataGridViewTextBoxColumn.Name = "imageNameDataGridViewTextBoxColumn";
+            this.imageNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tblProductsBindingSource
+            // 
+            this.tblProductsBindingSource.DataMember = "tblProducts";
+            this.tblProductsBindingSource.DataSource = this.companyDBDataSet_Products;
+            // 
+            // companyDBDataSet_Products
+            // 
+            this.companyDBDataSet_Products.DataSetName = "CompanyDBDataSet_Products";
+            this.companyDBDataSet_Products.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblProductsTableAdapter
+            // 
+            this.tblProductsTableAdapter.ClearBeforeFill = true;
             // 
             // AllStock
             // 
@@ -155,8 +180,8 @@ namespace ModernUI.Forms.Stock
             this.Text = "AllStock";
             this.Load += new System.EventHandler(this.AllStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Products)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProductsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Products)).EndInit();
             this.ResumeLayout(false);
 
         }

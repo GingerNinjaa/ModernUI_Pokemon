@@ -36,8 +36,7 @@ namespace ModernUI.Forms.Administration
         {
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'companyDBDataSet_ALL.tblUserRole' . Możesz go przenieść lub usunąć.
             this.tblUserRoleTableAdapter.Fill(this.companyDBDataSet_ALL.tblUserRole);
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'companyDBDataSet_ALL.tblPosition' . Możesz go przenieść lub usunąć.
-            this.tblPositionTableAdapter.Fill(this.companyDBDataSet_ALL.tblPosition);
+
         }
 
         private void btnAdminAddClose_Click(object sender, EventArgs e)
