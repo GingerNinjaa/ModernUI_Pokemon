@@ -60,7 +60,7 @@ namespace ModernUI.Forms.Administration
                 model.UserName = txtAdminAddUserName.Text;
                 model.Password = txtAdminAddPassword.Text;
                 model.Position = cbAdminPickPosition.Text;
-                model.Role = cbAdminPickRole.Text;
+               // model.RoleID = cbAdminPickRole.Text;
  
             try
             {

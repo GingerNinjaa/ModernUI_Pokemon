@@ -141,6 +141,10 @@
     <Compile Include="Migrations\202002171344355_Initial_Edit.designer.cs">
       <DependentUpon>202002171344355_Initial_Edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002171404075_ForeignKey_Test.cs" />
+    <Compile Include="Migrations\202002171404075_ForeignKey_Test.designer.cs">
+      <DependentUpon>202002171404075_ForeignKey_Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002171344355_Initial_Edit.resx">
       <DependentUpon>202002171344355_Initial_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002171404075_ForeignKey_Test.resx">
+      <DependentUpon>202002171404075_ForeignKey_Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
