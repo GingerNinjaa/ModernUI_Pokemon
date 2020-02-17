@@ -39,11 +39,11 @@
             this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.companyDBDataSet_Users = new ModernUI.CompanyDBDataSet_Users();
-            this.tblUserTableAdapter = new ModernUI.CompanyDBDataSet_UsersTableAdapters.tblUserTableAdapter();
+//            this.companyDBDataSet_Users = new ModernUI.CompanyDBDataSet_Users();
+  //          this.tblUserTableAdapter = new ModernUI.CompanyDBDataSet_UsersTableAdapters.tblUserTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUserBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Users)).BeginInit();
+//            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Users)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -134,16 +134,16 @@
             // tblUserBindingSource
             // 
             this.tblUserBindingSource.DataMember = "tblUser";
-            this.tblUserBindingSource.DataSource = this.companyDBDataSet_Users;
+ //           this.tblUserBindingSource.DataSource = this.companyDBDataSet_Users;
             // 
             // companyDBDataSet_Users
             // 
-            this.companyDBDataSet_Users.DataSetName = "CompanyDBDataSet_Users";
-            this.companyDBDataSet_Users.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+ //           this.companyDBDataSet_Users.DataSetName = "CompanyDBDataSet_Users";
+ //           this.companyDBDataSet_Users.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblUserTableAdapter
             // 
-            this.tblUserTableAdapter.ClearBeforeFill = true;
+ //           this.tblUserTableAdapter.ClearBeforeFill = true;
             // 
             // AllEmployee
             // 
@@ -155,9 +155,9 @@
             this.Name = "AllEmployee";
             this.Text = "AllEmployee";
             this.Load += new System.EventHandler(this.AllEmployee_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUserBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Users)).EndInit();
+  //          ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+ //           ((System.ComponentModel.ISupportInitialize)(this.tblUserBindingSource)).EndInit();
+ //           ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Users)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,9 +165,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private CompanyDBDataSet_Users companyDBDataSet_Users;
+//        private CompanyDBDataSet_Users companyDBDataSet_Users;
         private System.Windows.Forms.BindingSource tblUserBindingSource;
-        private CompanyDBDataSet_UsersTableAdapters.tblUserTableAdapter tblUserTableAdapter;
+ //       private CompanyDBDataSet_UsersTableAdapters.tblUserTableAdapter tblUserTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;

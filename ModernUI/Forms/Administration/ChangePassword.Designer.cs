@@ -34,8 +34,8 @@
             this.cbAdminPicEmployee = new System.Windows.Forms.ComboBox();
             this.tblUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.companyDBDataSetUsersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.companyDBDataSet_Users = new ModernUI.CompanyDBDataSet_Users();
-            this.tblUserTableAdapter = new ModernUI.CompanyDBDataSet_UsersTableAdapters.tblUserTableAdapter();
+  //          this.companyDBDataSet_Users = new ModernUI.CompanyDBDataSet_Users();
+ //           this.tblUserTableAdapter = new ModernUI.CompanyDBDataSet_UsersTableAdapters.tblUserTableAdapter();
             this.txtAdminConfirmEmail = new System.Windows.Forms.TextBox();
             this.btnAddArticle = new System.Windows.Forms.Button();
             this.btnAdminClose = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             this.txtAdminPasswordConfirm = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tblUserBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSetUsersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Users)).BeginInit();
+ //           ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Users)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -93,17 +93,17 @@
             // 
             // companyDBDataSetUsersBindingSource
             // 
-            this.companyDBDataSetUsersBindingSource.DataSource = this.companyDBDataSet_Users;
+ //           this.companyDBDataSetUsersBindingSource.DataSource = this.companyDBDataSet_Users;
             this.companyDBDataSetUsersBindingSource.Position = 0;
             // 
             // companyDBDataSet_Users
             // 
-            this.companyDBDataSet_Users.DataSetName = "CompanyDBDataSet_Users";
-            this.companyDBDataSet_Users.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+ //           this.companyDBDataSet_Users.DataSetName = "CompanyDBDataSet_Users";
+ //           this.companyDBDataSet_Users.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblUserTableAdapter
             // 
-            this.tblUserTableAdapter.ClearBeforeFill = true;
+   //         this.tblUserTableAdapter.ClearBeforeFill = true;
             // 
             // txtAdminConfirmEmail
             // 
@@ -206,7 +206,7 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ChangePassword_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.tblUserBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSetUsersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Users)).EndInit();
+ //           ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Users)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,9 +218,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbAdminPicEmployee;
         private System.Windows.Forms.BindingSource companyDBDataSetUsersBindingSource;
-        private CompanyDBDataSet_Users companyDBDataSet_Users;
+//        private CompanyDBDataSet_Users companyDBDataSet_Users;
         private System.Windows.Forms.BindingSource tblUserBindingSource;
-        private CompanyDBDataSet_UsersTableAdapters.tblUserTableAdapter tblUserTableAdapter;
+//        private CompanyDBDataSet_UsersTableAdapters.tblUserTableAdapter tblUserTableAdapter;
         private System.Windows.Forms.TextBox txtAdminConfirmEmail;
         private System.Windows.Forms.Button btnAddArticle;
         private System.Windows.Forms.Button btnAdminClose;

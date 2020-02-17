@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,9 +38,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cbAdminPickPosition = new System.Windows.Forms.ComboBox();
             this.cbAdminPickRole = new System.Windows.Forms.ComboBox();
-            this.companyDBDataSet_ALL = new ModernUI.CompanyDBDataSet_ALL();
-            this.tblPositionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblPositionTableAdapter = new ModernUI.CompanyDBDataSet_ALLTableAdapters.tblPositionTableAdapter();
             this.txtAdminAddPasswordConfirm = new System.Windows.Forms.TextBox();
             this.txtAdminAddPassword = new System.Windows.Forms.TextBox();
             this.txtAdminAddUserName = new System.Windows.Forms.TextBox();
@@ -49,12 +45,6 @@
             this.txtAdminAddLastName = new System.Windows.Forms.TextBox();
             this.txtAdminAddFirstName = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnAdminAddClose = new System.Windows.Forms.Button();
-            this.tblUserRoleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblUserRoleTableAdapter = new ModernUI.CompanyDBDataSet_ALLTableAdapters.tblUserRoleTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_ALL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblPositionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUserRoleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -155,8 +145,6 @@
             // 
             // cbAdminPickPosition
             // 
-            this.cbAdminPickPosition.DataSource = this.tblPositionBindingSource;
-            this.cbAdminPickPosition.DisplayMember = "PositionName";
             this.cbAdminPickPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdminPickPosition.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbAdminPickPosition.FormattingEnabled = true;
@@ -164,12 +152,11 @@
             this.cbAdminPickPosition.Name = "cbAdminPickPosition";
             this.cbAdminPickPosition.Size = new System.Drawing.Size(172, 29);
             this.cbAdminPickPosition.TabIndex = 24;
-            this.cbAdminPickPosition.ValueMember = "PositionName";
+            this.cbAdminPickPosition.ValueMember = "tblPosition.PositionName";
+            this.cbAdminPickPosition.SelectedIndexChanged += new System.EventHandler(this.cbAdminPickPosition_SelectedIndexChanged);
             // 
             // cbAdminPickRole
             // 
-            this.cbAdminPickRole.DataSource = this.tblUserRoleBindingSource;
-            this.cbAdminPickRole.DisplayMember = "RoleName";
             this.cbAdminPickRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdminPickRole.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbAdminPickRole.FormattingEnabled = true;
@@ -178,20 +165,6 @@
             this.cbAdminPickRole.Size = new System.Drawing.Size(172, 29);
             this.cbAdminPickRole.TabIndex = 25;
             this.cbAdminPickRole.ValueMember = "RoleName";
-            // 
-            // companyDBDataSet_ALL
-            // 
-            this.companyDBDataSet_ALL.DataSetName = "CompanyDBDataSet_ALL";
-            this.companyDBDataSet_ALL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblPositionBindingSource
-            // 
-            this.tblPositionBindingSource.DataMember = "tblPosition";
-            this.tblPositionBindingSource.DataSource = this.companyDBDataSet_ALL;
-            // 
-            // tblPositionTableAdapter
-            // 
-            this.tblPositionTableAdapter.ClearBeforeFill = true;
             // 
             // txtAdminAddPasswordConfirm
             // 
@@ -254,35 +227,12 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnAdminAddClose
-            // 
-            this.btnAdminAddClose.BackColor = System.Drawing.Color.Green;
-            this.btnAdminAddClose.FlatAppearance.BorderSize = 0;
-            this.btnAdminAddClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdminAddClose.Location = new System.Drawing.Point(786, 12);
-            this.btnAdminAddClose.Name = "btnAdminAddClose";
-            this.btnAdminAddClose.Size = new System.Drawing.Size(35, 35);
-            this.btnAdminAddClose.TabIndex = 37;
-            this.btnAdminAddClose.Text = "X";
-            this.btnAdminAddClose.UseVisualStyleBackColor = false;
-            this.btnAdminAddClose.Click += new System.EventHandler(this.btnAdminAddClose_Click);
-            // 
-            // tblUserRoleBindingSource
-            // 
-            this.tblUserRoleBindingSource.DataMember = "tblUserRole";
-            this.tblUserRoleBindingSource.DataSource = this.companyDBDataSet_ALL;
-            // 
-            // tblUserRoleTableAdapter
-            // 
-            this.tblUserRoleTableAdapter.ClearBeforeFill = true;
-            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(833, 535);
-            this.Controls.Add(this.btnAdminAddClose);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtAdminAddFirstName);
             this.Controls.Add(this.txtAdminAddLastName);
@@ -306,9 +256,6 @@
             this.Text = "AddEmployee";
             this.Load += new System.EventHandler(this.AddEmployee_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_ALL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblPositionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblUserRoleBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,9 +273,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbAdminPickPosition;
         private System.Windows.Forms.ComboBox cbAdminPickRole;
-        private CompanyDBDataSet_ALL companyDBDataSet_ALL;
-        private System.Windows.Forms.BindingSource tblPositionBindingSource;
-        private CompanyDBDataSet_ALLTableAdapters.tblPositionTableAdapter tblPositionTableAdapter;
+  //      private CompanyDBDataSet_ALL companyDBDataSet_ALL;
         private System.Windows.Forms.TextBox txtAdminAddPasswordConfirm;
         private System.Windows.Forms.TextBox txtAdminAddPassword;
         private System.Windows.Forms.TextBox txtAdminAddUserName;
@@ -336,8 +281,6 @@
         private System.Windows.Forms.TextBox txtAdminAddLastName;
         private System.Windows.Forms.TextBox txtAdminAddFirstName;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnAdminAddClose;
-        private System.Windows.Forms.BindingSource tblUserRoleBindingSource;
-        private CompanyDBDataSet_ALLTableAdapters.tblUserRoleTableAdapter tblUserRoleTableAdapter;
+ //       private CompanyDBDataSet_ALLTableAdapters.tblUserRoleTableAdapter tblUserRoleTableAdapter;
     }
 }

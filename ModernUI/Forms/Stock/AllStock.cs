@@ -24,9 +24,6 @@ namespace ModernUI.Forms.Stock
 
         private void AllStock_Load(object sender, EventArgs e)
         {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'companyDBDataSet_Products.tblProducts' . Możesz go przenieść lub usunąć.
-            this.tblProductsTableAdapter.Fill(this.companyDBDataSet_Products.tblProducts);
-
 
         }
     }

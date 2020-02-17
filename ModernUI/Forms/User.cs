@@ -154,11 +154,11 @@ namespace ModernUI
         private void btnEditUserDataSave_Click(object sender, EventArgs e)
         {
 
-            using (CompanyDBEntities db = new CompanyDBEntities())
+            using (DB db = new DB())
             {
 
                 //Checking for that same UserName
-                if (db.tblUser.Any(x => x.UserName.Equals(txtUserNameEdit.Text)))
+                if (db.Users.Any(x => x.UserName.Equals(txtUserNameEdit.Text)))
                 {
                     //wyswietli ten czerwony prostokąt
                     MessageBox.Show("XD", "User is locked");

@@ -34,8 +34,7 @@ namespace ModernUI.Forms.Administration
 
         private void AddEmployee_Load(object sender, EventArgs e)
         {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'companyDBDataSet_ALL.tblUserRole' . Możesz go przenieść lub usunąć.
-            this.tblUserRoleTableAdapter.Fill(this.companyDBDataSet_ALL.tblUserRole);
+
 
         }
 
@@ -65,9 +64,9 @@ namespace ModernUI.Forms.Administration
  
             try
             {
-                using (CompanyDBEntities db = new CompanyDBEntities())
+                using (DB db = new DB())
                 {
-                    db.tblUser.Add(model);
+                    db.Users.Add(model);
                     db.SaveChanges();
                 }
                 MessageBox.Show("xd", "succes");
@@ -77,6 +76,11 @@ namespace ModernUI.Forms.Administration
                 MessageBox.Show("xd", "Fail");
                
             }
+        }
+
+        private void cbAdminPickPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

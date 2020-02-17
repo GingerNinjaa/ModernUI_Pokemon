@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnAddProductClear = new System.Windows.Forms.Button();
             this.btnAddArticle = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,12 +40,7 @@
             this.txtAddProductDescription = new System.Windows.Forms.TextBox();
             this.txtAddProductPrice = new System.Windows.Forms.TextBox();
             this.cbAddProductCategory = new System.Windows.Forms.ComboBox();
-            this.tblCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.companyDBDataSet_Category = new ModernUI.CompanyDBDataSet_Category();
-            this.tblCategoryTableAdapter = new ModernUI.CompanyDBDataSet_CategoryTableAdapters.tblCategoryTableAdapter();
             this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.tblCategoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Category)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddProductClear
@@ -175,29 +169,12 @@
             // 
             // cbAddProductCategory
             // 
-            this.cbAddProductCategory.DataSource = this.tblCategoryBindingSource;
-            this.cbAddProductCategory.DisplayMember = "CategoryName";
             this.cbAddProductCategory.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbAddProductCategory.FormattingEnabled = true;
             this.cbAddProductCategory.Location = new System.Drawing.Point(297, 333);
             this.cbAddProductCategory.Name = "cbAddProductCategory";
             this.cbAddProductCategory.Size = new System.Drawing.Size(200, 29);
             this.cbAddProductCategory.TabIndex = 31;
-            this.cbAddProductCategory.ValueMember = "CategoryName";
-            // 
-            // tblCategoryBindingSource
-            // 
-            this.tblCategoryBindingSource.DataMember = "tblCategory";
-            this.tblCategoryBindingSource.DataSource = this.companyDBDataSet_Category;
-            // 
-            // companyDBDataSet_Category
-            // 
-            this.companyDBDataSet_Category.DataSetName = "CompanyDBDataSet_Category";
-            this.companyDBDataSet_Category.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblCategoryTableAdapter
-            // 
-            this.tblCategoryTableAdapter.ClearBeforeFill = true;
             // 
             // btnClose
             // 
@@ -237,8 +214,6 @@
             this.Text = "AddStock";
             this.Load += new System.EventHandler(this.AddStock_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddStock_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.tblCategoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDBDataSet_Category)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,9 +232,8 @@
         private System.Windows.Forms.TextBox txtAddProductDescription;
         private System.Windows.Forms.TextBox txtAddProductPrice;
         private System.Windows.Forms.ComboBox cbAddProductCategory;
-        private CompanyDBDataSet_Category companyDBDataSet_Category;
-        private System.Windows.Forms.BindingSource tblCategoryBindingSource;
-        private CompanyDBDataSet_CategoryTableAdapters.tblCategoryTableAdapter tblCategoryTableAdapter;
+ //       private CompanyDBDataSet_Category companyDBDataSet_Category;
+ //       private CompanyDBDataSet_CategoryTableAdapters.tblCategoryTableAdapter tblCategoryTableAdapter;
         private System.Windows.Forms.Button btnClose;
     }
 }

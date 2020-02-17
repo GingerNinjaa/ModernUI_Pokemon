@@ -97,10 +97,10 @@ namespace ModernUI
         {
             bool isvalid = false;         
             //CompanyDBEntities
-            using (CompanyDBEntities db = new CompanyDBEntities())
+            using (DB db = new DB())
             {
                 
-                if (db.tblUser.Any(x => x.UserName.Equals(txtLogin.Text) && x.Password.Equals(txtPassword.Text)))
+                if (db.Users.Any(x => x.UserName.Equals(txtLogin.Text) && x.Password.Equals(txtPassword.Text)))
                 {
                     isvalid = true;
                     
@@ -110,15 +110,15 @@ namespace ModernUI
 
             if (isvalid == false)
             {
-                MessageBox.Show("error", "erorr");
+                MessageBox.Show("error", "error");
             }
             else
             {
                 tblUser CurentUser = new tblUser();
 
-                using (CompanyDBEntities db = new CompanyDBEntities())
+                using (DB db = new DB())
                 {
-                    CurentUser = db.tblUser.FirstOrDefault(x => x.UserName == txtLogin.Text);
+                    CurentUser = db.Users.FirstOrDefault(x => x.UserName == txtLogin.Text);
                 }
                     
                 //Close Login and open MainBoard

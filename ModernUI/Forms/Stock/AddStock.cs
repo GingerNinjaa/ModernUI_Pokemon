@@ -54,10 +54,6 @@ namespace ModernUI.Forms.Stock
 
         private void AddStock_Load(object sender, EventArgs e)
         {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'companyDBDataSet_Category.tblCategory' . Możesz go przenieść lub usunąć.
-            this.tblCategoryTableAdapter.Fill(this.companyDBDataSet_Category.tblCategory);
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'companyDBDataSet.tblProducts' . Możesz go przenieść lub usunąć.
-            // this.tblProductsTableAdapter.Fill(this.companyDBDataSet.tblProducts);
 
         }
 
@@ -72,14 +68,14 @@ namespace ModernUI.Forms.Stock
 
             try
             {
-                using (CompanyDBEntities db = new CompanyDBEntities())
+                using (DB db = new DB())
                 {
                     model.Name = txtAddProductName.Text;
                     model.Description = txtAddProductDescription.Text;
                     model.Price = decimal.Parse(txtAddProductPrice.Text);
                     model.CategoryName = cbAddProductCategory.Text;
 
-                    db.tblProducts.Add(model);
+                    db.Products.Add(model);
                     db.SaveChanges();
                 }
                 MessageBox.Show("XD", "OK");
