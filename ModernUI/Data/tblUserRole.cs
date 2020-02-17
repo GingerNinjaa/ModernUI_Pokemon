@@ -11,8 +11,8 @@ namespace ModernUI.Data
     {
         [Key]
         public int RoleId { get; set; }
+        [StringLength(50)]
         public string RoleName { get; set; }
 
-        public virtual tblUser tblUser { get; set; }
     }
 }

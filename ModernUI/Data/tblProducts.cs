@@ -11,9 +11,12 @@ namespace ModernUI.Data
     {
         [Key]
         public int ProductId { get; set; }
+        [StringLength(150)]
         public string Name { get; set; }
+        [StringLength(500)]
         public string Description { get; set; }
         public Nullable<decimal> Price { get; set; }
+        [StringLength(150)]
         public string CategoryName { get; set; }
         public string ImageName { get; set; }
 

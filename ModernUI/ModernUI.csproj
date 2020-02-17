@@ -133,6 +133,15 @@
     <Compile Include="Forms\Stock\AllStock.Designer.cs">
       <DependentUpon>AllStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002171330269_Initial.cs" />
+    <Compile Include="Migrations\202002171330269_Initial.designer.cs">
+      <DependentUpon>202002171330269_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002171344355_Initial_Edit.cs" />
+    <Compile Include="Migrations\202002171344355_Initial_Edit.designer.cs">
+      <DependentUpon>202002171344355_Initial_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDTO.cs" />
@@ -162,6 +171,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stock\AllStock.resx">
       <DependentUpon>AllStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002171330269_Initial.resx">
+      <DependentUpon>202002171330269_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002171344355_Initial_Edit.resx">
+      <DependentUpon>202002171344355_Initial_Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

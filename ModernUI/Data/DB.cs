@@ -10,6 +10,7 @@ namespace ModernUI.Data
         public DB()
             : base("name=DB")
         {
+            
         }
         public DbSet<tblCategory> Categories { get; set; }
         public DbSet<tblProducts> Products { get; set; }

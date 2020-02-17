@@ -34,8 +34,6 @@ namespace ModernUI.Forms.Administration
 
         private void ChangePassword_Load(object sender, EventArgs e)
         {
-            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'companyDBDataSet_Users.tblUser' . Możesz go przenieść lub usunąć.
-            this.tblUserTableAdapter.Fill(this.companyDBDataSet_Users.tblUser);
 
         }
 
@@ -56,12 +54,12 @@ namespace ModernUI.Forms.Administration
 
         private void test()
         {
-            using (CompanyDBEntities db = new CompanyDBEntities())
+            using (DB db = new DB())
             {
-                if (db.tblUser.Any(x => x.UserName.Equals(cbAdminPicEmployee.Text)))
+                if (db.Users.Any(x => x.UserName.Equals(cbAdminPicEmployee.Text)))
                 {
 
-                    txtAdminConfirmEmail.Text = db.tblUser.Where(x => x.UserName == cbAdminPicEmployee.Text)
+                    txtAdminConfirmEmail.Text = db.Users.Where(x => x.UserName == cbAdminPicEmployee.Text)
                         .Select(x => x.Email)
                         .FirstOrDefault()
                         .ToString();   
@@ -76,12 +74,12 @@ namespace ModernUI.Forms.Administration
 
         private void cbAdminPicEmployee_TextChanged(object sender, EventArgs e)
         {
-            using (CompanyDBEntities db = new CompanyDBEntities())
+            using (DB db = new DB())
             {
-                if (db.tblUser.Any(x => x.UserName.Equals(cbAdminPicEmployee.Text)))
+                if (db.Users.Any(x => x.UserName.Equals(cbAdminPicEmployee.Text)))
                 {
 
-                    txtAdminConfirmEmail.Text = db.tblUser.Where(x => x.UserName == cbAdminPicEmployee.Text)
+                    txtAdminConfirmEmail.Text = db.Users.Where(x => x.UserName == cbAdminPicEmployee.Text)
                         .Select(x => x.Email)
                         .FirstOrDefault()
                         .ToString();
@@ -93,7 +91,7 @@ namespace ModernUI.Forms.Administration
         {
             //Changing password of selected user
 
-            using (CompanyDBEntities db = new CompanyDBEntities())
+            using (DB db = new DB())
             {
                 if (txtAdminPassword.Text != txtAdminPasswordConfirm.Text)
                 {
@@ -104,13 +102,13 @@ namespace ModernUI.Forms.Administration
                 tblUser model = new tblUser()
                 {
                     
-                    UserId = db.tblUser.Where(x => x.UserName == cbAdminPicEmployee.Text).Select(x => x.UserId).FirstOrDefault(),
+                    UserId = db.Users.Where(x => x.UserName == cbAdminPicEmployee.Text).Select(x => x.UserId).FirstOrDefault(),
                     UserName = cbAdminPicEmployee.Text, 
                     Password = txtAdminPassword.Text
                 };
 
                 // zmienić hasło osobie o username i email  
-                db.tblUser.Attach(model);
+                db.Users.Attach(model);
                 db.Entry(model).Property(x => x.Password).IsModified = true;
                 db.SaveChanges();
 
