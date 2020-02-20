@@ -14,9 +14,12 @@ namespace ModernUI.Forms.Administration
 {
     public partial class AddEmployee : Form
     {
-        public AddEmployee()
+        private readonly AllEmployee tmp;
+        public AddEmployee(AllEmployee all)
         {
             InitializeComponent();
+
+            tmp = all;
         }
 
         //Turbo ważne do przesuwanie okienka PART 2
@@ -34,6 +37,8 @@ namespace ModernUI.Forms.Administration
 
         private void AddEmployee_Load(object sender, EventArgs e)
         {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'localDBDataSet.tblUserRoles' . Możesz go przenieść lub usunąć.
+            this.tblUserRolesTableAdapter.Fill(this.localDBDataSet.tblUserRoles);
 
 
         }
@@ -42,7 +47,7 @@ namespace ModernUI.Forms.Administration
         {
             this.Close();
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             //Adding new user to the database
@@ -60,7 +65,7 @@ namespace ModernUI.Forms.Administration
                 model.UserName = txtAdminAddUserName.Text;
                 model.Password = txtAdminAddPassword.Text;
                 model.Position = cbAdminPickPosition.Text;
-               // model.RoleID = cbAdminPickRole.Text;
+                model.Role = cbAdminPickRole.Text;
  
             try
             {
@@ -69,6 +74,10 @@ namespace ModernUI.Forms.Administration
                     db.Users.Add(model);
                     db.SaveChanges();
                 }
+
+                tmp.AllEmployeeTableUpdate();
+
+
                 MessageBox.Show("xd", "succes");
             }
             catch (System.Data.Entity.Validation.DbEntityValidationException)
@@ -82,5 +91,11 @@ namespace ModernUI.Forms.Administration
         {
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+   
     }
 }

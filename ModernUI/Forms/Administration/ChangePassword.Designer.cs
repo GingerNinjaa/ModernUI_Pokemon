@@ -84,7 +84,7 @@
             this.cbAdminPicEmployee.Size = new System.Drawing.Size(172, 29);
             this.cbAdminPicEmployee.TabIndex = 16;
             this.cbAdminPicEmployee.ValueMember = "UserName";
-            this.cbAdminPicEmployee.TextChanged += new System.EventHandler(this.cbAdminPicEmployee_TextChanged);
+//            this.cbAdminPicEmployee.TextChanged += new System.EventHandler(this.cbAdminPicEmployee_TextChanged);
             // 
             // tblUserBindingSource
             // 

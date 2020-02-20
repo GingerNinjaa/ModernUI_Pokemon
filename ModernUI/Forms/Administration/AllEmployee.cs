@@ -19,8 +19,15 @@ namespace ModernUI.Forms.Administration
 
         private void AllEmployee_Load(object sender, EventArgs e)
         {
+            // TODO: Ten wiersz kodu wczytuje dane do tabeli 'localDBDataSet.tblUsers' . Możesz go przenieść lub usunąć.
+            this.tblUsersTableAdapter.Fill(this.localDBDataSet.tblUsers);
 
 
+        }
+        public void AllEmployeeTableUpdate()
+        {
+            dataGridView1.Update();
+            dataGridView1.Refresh();
         }
     }
 }

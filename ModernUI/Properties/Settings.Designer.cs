@@ -44,5 +44,16 @@ namespace ModernUI.Properties {
                 return ((string)(this["CompanyDBConnection_DataGridView_AllStock"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Data\\LocalDB." +
+            "mdf;Integrated Security=True")]
+        public string LocalDBConnectionString {
+            get {
+                return ((string)(this["LocalDBConnectionString"]));
+            }
+        }
     }
 }

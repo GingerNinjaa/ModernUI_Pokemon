@@ -26,6 +26,6 @@ namespace ModernUI.Data
         public string Password { get; set; }
 
         [StringLength(50)]
-              public string Role { get; set; }   
+        public string Role { get; set; }   
     }
 }

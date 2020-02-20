@@ -55,7 +55,7 @@ namespace ModernUI.Forms.Administration
 
         private void btnAdminAddEmployee_Click(object sender, EventArgs e)
         {
-            AddEmployee addEmployee = new AddEmployee();
+            AddEmployee addEmployee = new AddEmployee(new AllEmployee());
             addEmployee.Show();
         }
     }

@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cbAdminPickPosition = new System.Windows.Forms.ComboBox();
-            this.cbAdminPickRole = new System.Windows.Forms.ComboBox();
             this.txtAdminAddPasswordConfirm = new System.Windows.Forms.TextBox();
             this.txtAdminAddPassword = new System.Windows.Forms.TextBox();
             this.txtAdminAddUserName = new System.Windows.Forms.TextBox();
@@ -45,6 +44,16 @@
             this.txtAdminAddLastName = new System.Windows.Forms.TextBox();
             this.txtAdminAddFirstName = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.localDBDataSet = new ModernUI.LocalDBDataSet();
+            this.tblUserRolesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbAdminPickRole = new System.Windows.Forms.ComboBox();
+            this.tblUserRolesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblUserRolesTableAdapter = new ModernUI.LocalDBDataSetTableAdapters.tblUserRolesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.localDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUserRolesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUserRolesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -119,18 +128,6 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "Position";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Honeydew;
-            this.label8.Location = new System.Drawing.Point(14, 453);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 25);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Permissions";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -145,6 +142,8 @@
             // 
             // cbAdminPickPosition
             // 
+            this.cbAdminPickPosition.DataSource = this.tblUserRolesBindingSource;
+            this.cbAdminPickPosition.DisplayMember = "RoleName";
             this.cbAdminPickPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAdminPickPosition.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cbAdminPickPosition.FormattingEnabled = true;
@@ -152,19 +151,8 @@
             this.cbAdminPickPosition.Name = "cbAdminPickPosition";
             this.cbAdminPickPosition.Size = new System.Drawing.Size(172, 29);
             this.cbAdminPickPosition.TabIndex = 24;
-            this.cbAdminPickPosition.ValueMember = "tblPosition.PositionName";
+            this.cbAdminPickPosition.ValueMember = "RoleName";
             this.cbAdminPickPosition.SelectedIndexChanged += new System.EventHandler(this.cbAdminPickPosition_SelectedIndexChanged);
-            // 
-            // cbAdminPickRole
-            // 
-            this.cbAdminPickRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAdminPickRole.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.cbAdminPickRole.FormattingEnabled = true;
-            this.cbAdminPickRole.Location = new System.Drawing.Point(203, 449);
-            this.cbAdminPickRole.Name = "cbAdminPickRole";
-            this.cbAdminPickRole.Size = new System.Drawing.Size(172, 29);
-            this.cbAdminPickRole.TabIndex = 25;
-            this.cbAdminPickRole.ValueMember = "RoleName";
             // 
             // txtAdminAddPasswordConfirm
             // 
@@ -227,12 +215,69 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Green;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(786, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(35, 35);
+            this.btnClose.TabIndex = 36;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // localDBDataSet
+            // 
+            this.localDBDataSet.DataSetName = "LocalDBDataSet";
+            this.localDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblUserRolesBindingSource
+            // 
+            this.tblUserRolesBindingSource.DataMember = "tblUserRoles";
+            this.tblUserRolesBindingSource.DataSource = this.localDBDataSet;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Honeydew;
+            this.label8.Location = new System.Drawing.Point(14, 453);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(127, 25);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Permissions";
+            // 
+            // cbAdminPickRole
+            // 
+            this.cbAdminPickRole.DataSource = this.tblUserRolesBindingSource1;
+            this.cbAdminPickRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAdminPickRole.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cbAdminPickRole.FormattingEnabled = true;
+            this.cbAdminPickRole.Location = new System.Drawing.Point(203, 449);
+            this.cbAdminPickRole.Name = "cbAdminPickRole";
+            this.cbAdminPickRole.Size = new System.Drawing.Size(172, 29);
+            this.cbAdminPickRole.TabIndex = 25;
+            this.cbAdminPickRole.ValueMember = "RoleName";
+            // 
+            // tblUserRolesBindingSource1
+            // 
+            this.tblUserRolesBindingSource1.DataMember = "tblUserRoles";
+            this.tblUserRolesBindingSource1.DataSource = this.localDBDataSet;
+            // 
+            // tblUserRolesTableAdapter
+            // 
+            this.tblUserRolesTableAdapter.ClearBeforeFill = true;
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(833, 535);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtAdminAddFirstName);
             this.Controls.Add(this.txtAdminAddLastName);
@@ -256,6 +301,9 @@
             this.Text = "AddEmployee";
             this.Load += new System.EventHandler(this.AddEmployee_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddEmployee_MouseDown);
+            ((System.ComponentModel.ISupportInitialize)(this.localDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUserRolesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUserRolesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,10 +317,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbAdminPickPosition;
-        private System.Windows.Forms.ComboBox cbAdminPickRole;
   //      private CompanyDBDataSet_ALL companyDBDataSet_ALL;
         private System.Windows.Forms.TextBox txtAdminAddPasswordConfirm;
         private System.Windows.Forms.TextBox txtAdminAddPassword;
@@ -281,6 +327,13 @@
         private System.Windows.Forms.TextBox txtAdminAddLastName;
         private System.Windows.Forms.TextBox txtAdminAddFirstName;
         private System.Windows.Forms.Button button1;
- //       private CompanyDBDataSet_ALLTableAdapters.tblUserRoleTableAdapter tblUserRoleTableAdapter;
+        private System.Windows.Forms.Button btnClose;
+        private LocalDBDataSet localDBDataSet;
+        private System.Windows.Forms.BindingSource tblUserRolesBindingSource;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbAdminPickRole;
+        private System.Windows.Forms.BindingSource tblUserRolesBindingSource1;
+        private LocalDBDataSetTableAdapters.tblUserRolesTableAdapter tblUserRolesTableAdapter;
+        //       private CompanyDBDataSet_ALLTableAdapters.tblUserRoleTableAdapter tblUserRoleTableAdapter;
     }
 }

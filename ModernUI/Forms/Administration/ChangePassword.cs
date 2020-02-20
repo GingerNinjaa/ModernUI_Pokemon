@@ -71,7 +71,7 @@ namespace ModernUI.Forms.Administration
         {
             test();
         }
-
+/*
         private void cbAdminPicEmployee_TextChanged(object sender, EventArgs e)
         {
             using (DB db = new DB())
@@ -86,7 +86,7 @@ namespace ModernUI.Forms.Administration
                 }
             }
         }
-
+        */
         private void btnAddArticle_Click(object sender, EventArgs e)
         {
             //Changing password of selected user

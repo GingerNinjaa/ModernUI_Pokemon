@@ -24,7 +24,7 @@ namespace ModernUI
             InitializeComponent();
             customizeDesing();
 
-            if (CurentUser.Role.Trim() != "Admin")
+            if (CurentUser.Role.Trim() != "Admin") 
             {
                 btnAdministration.Enabled = false;
             }
