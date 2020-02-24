@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ModernUI.Data;
 
+
 namespace ModernUI.Forms.Stock
 {
     public partial class AddStock : Form
@@ -30,6 +31,13 @@ namespace ModernUI.Forms.Stock
             //Przesuwanie Okien PART 3  
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void Alert(string msg, Messages.Messages.enmType type)
+        {
+            Messages.Messages popup = new Messages.Messages();
+            popup.showAlert(msg, type);
+
         }
 
 
@@ -81,13 +89,14 @@ namespace ModernUI.Forms.Stock
                     db.Products.Add(model);
                     db.SaveChanges();
                 }
-                MessageBox.Show("XD", "OK");
+                this.Alert("Article added", Messages.Messages.enmType.Success);
+                //MessageBox.Show("XD", "OK");
 
             }
             catch (System.Data.Entity.Validation.DbEntityValidationException)
             {
-
-                MessageBox.Show("XD", "FAIL");
+                this.Alert("Error", Messages.Messages.enmType.Error);
+                //MessageBox.Show("XD", "FAIL");
             }
            
         }

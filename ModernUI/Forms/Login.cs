@@ -10,6 +10,7 @@ using System.Windows.Forms;
 //Przesuwanie okien PART 1
 using System.Runtime.InteropServices;
 using ModernUI.Data;
+using ModernUI.Forms.Messages;
 
 namespace ModernUI
 {
@@ -31,6 +32,11 @@ namespace ModernUI
         private void pictureBoxMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+        private void Alert(string msg, Messages.enmType type)
+        {
+            Messages popup = new Messages();
+            popup.showAlert(msg, type);
         }
 
         #region Login and Password
@@ -110,7 +116,8 @@ namespace ModernUI
 
             if (isvalid == false)
             {
-                MessageBox.Show("error", "error");
+                this.Alert("Wrong login or password", Messages.enmType.Error);
+                //MessageBox.Show("error", "error");
             }
             else
             {
@@ -120,14 +127,23 @@ namespace ModernUI
                 {
                     CurentUser = db.Users.FirstOrDefault(x => x.UserName == txtLogin.Text);
                 }
-                    
+
                 //Close Login and open MainBoard
+                this.Alert("Access granted", Messages.enmType.Success);
                 this.Hide();
                 var menu = new MainBoard(CurentUser);
                 menu.Show();
                 
             }
 
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnLogin_Click(sender, e);
+            }
         }
     }
 }

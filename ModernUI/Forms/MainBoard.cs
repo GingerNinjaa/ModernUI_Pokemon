@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ModernUI.Data;
 using ModernUI.Forms.Administration;
+using ModernUI.Forms.Messages;
 
 namespace ModernUI
 {
@@ -28,6 +29,12 @@ namespace ModernUI
             {
                 btnAdministration.Enabled = false;
             }
+        }
+
+        private void Alert(string msg, Messages.enmType type)
+        {
+            Messages popup = new Messages();
+            popup.showAlert(msg, type);
         }
 
         /*
@@ -104,11 +111,6 @@ namespace ModernUI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            /*
-             * Jakiś kod
-             * 
-             * 
-             */
         }
 
         #endregion
@@ -136,10 +138,13 @@ namespace ModernUI
         private void btnUser_Click(object sender, EventArgs e)
         {
             openChildForm(new User(CurentUser));
+
         }
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
+            this.Alert("Welcome to my website", Messages.enmType.Info);
+
             System.Diagnostics.Process.Start("https://www.dlewandowski.pl");
         }
 
@@ -150,6 +155,8 @@ namespace ModernUI
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            this.Alert("Logout", Messages.enmType.Info);
+
             this.Hide();
             var login = new Login();
             login.Show();

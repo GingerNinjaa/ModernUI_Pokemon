@@ -115,6 +115,12 @@
     <Compile Include="Forms\Administration\AdminArea.Designer.cs">
       <DependentUpon>AdminArea.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Messages\Messages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Messages\Messages.Designer.cs">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Administration\AdminArea.resx">
       <DependentUpon>AdminArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Messages\Messages.resx">
+      <DependentUpon>Messages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\User.resx">
       <DependentUpon>User.cs</DependentUpon>

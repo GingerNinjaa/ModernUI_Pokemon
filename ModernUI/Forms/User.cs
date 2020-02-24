@@ -1,4 +1,5 @@
 ﻿using ModernUI.Data;
+using ModernUI.Forms.Messages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,12 @@ namespace ModernUI
             setUserData();
 
 
+        }
+
+        private void Alert(string msg, Messages.enmType type)
+        {
+            Messages popup = new Messages();
+            popup.showAlert(msg, type);
         }
 
         private void setUserData()
@@ -161,14 +168,16 @@ namespace ModernUI
                 if (db.Users.Any(x => x.UserName.Equals(txtUserNameEdit.Text)))
                 {
                     //wyswietli ten czerwony prostokąt
-                    MessageBox.Show("XD", "User is locked");
+                    this.Alert("Username is taken", Messages.enmType.Error);
+                  //  MessageBox.Show("XD", "User is locked");
                 }
 
                 //Checking password
                 if (txtPasswordEdit.Text != txtPasswordConfEdit.Text)
                 {
                     //wyswietli ten czerwony prostokąt
-                    MessageBox.Show("XD", "Password !=");
+                    this.Alert("passwords are not the same", Messages.enmType.Error);
+                   // MessageBox.Show("XD", "Password !=");
                 }
 
                 this.CurentUser.UserId = this.CurentUser.UserId;
@@ -194,7 +203,8 @@ namespace ModernUI
                 db.SaveChanges();
 
                 //ten zielony komunikat
-                MessageBox.Show("XD", "Edit succes ");
+                this.Alert("Edit succes", Messages.enmType.Success);
+             //   MessageBox.Show("XD", "Edit succes ");
             }
 
         }

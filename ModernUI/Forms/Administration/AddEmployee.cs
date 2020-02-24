@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ModernUI.Data;
 
+
 namespace ModernUI.Forms.Administration
 {
     public partial class AddEmployee : Form
@@ -19,7 +20,7 @@ namespace ModernUI.Forms.Administration
         {
             InitializeComponent();
 
-          
+
         }
 
         //Turbo ważne do przesuwanie okienka PART 2
@@ -35,6 +36,13 @@ namespace ModernUI.Forms.Administration
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        private void Alert(string msg, Messages.Messages.enmType type)
+        {
+            Messages.Messages popup = new Messages.Messages();
+            popup.showAlert(msg, type);
+        }
+
+
         private void AddEmployee_Load(object sender, EventArgs e)
         {
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'localDBDataSet.tblUserRoles' . Możesz go przenieść lub usunąć.
@@ -47,26 +55,27 @@ namespace ModernUI.Forms.Administration
         {
             this.Close();
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             //Adding new user to the database
-            tblUser model = new tblUser();   
+            tblUser model = new tblUser();
 
             if (txtAdminAddPassword.Text != txtAdminAddPasswordConfirm.Text)
             {
                 //RedPopup
-                MessageBox.Show("xd", "paswort are incorect");
+                this.Alert("passwords are not the same", Messages.Messages.enmType.Error);
+                //  MessageBox.Show("xd", "paswort are incorect");
             }
-       
-                model.FirstName = txtAdminAddFirstName.Text;
-                model.LastName = txtAdminAddLastName.Text;
-                model.Email = txtAdminAddEmail.Text;
-                model.UserName = txtAdminAddUserName.Text;
-                model.Password = txtAdminAddPassword.Text;
-                model.Position = cbAdminPickPosition.Text;
-                model.Role = cbAdminPickRole.Text;
- 
+
+            model.FirstName = txtAdminAddFirstName.Text;
+            model.LastName = txtAdminAddLastName.Text;
+            model.Email = txtAdminAddEmail.Text;
+            model.UserName = txtAdminAddUserName.Text;
+            model.Password = txtAdminAddPassword.Text;
+            model.Position = cbAdminPickPosition.Text;
+            model.Role = cbAdminPickRole.Text;
+
             try
             {
                 using (DB db = new DB())
@@ -75,15 +84,17 @@ namespace ModernUI.Forms.Administration
                     db.SaveChanges();
                 }
 
-             //   tmp.AllEmployeeTableUpdate();
+                //   tmp.AllEmployeeTableUpdate();
 
-
-                MessageBox.Show("xd", "succes");
+                this.Alert("User added", Messages.Messages.enmType.Success);
+                //   MessageBox.Show("xd", "succes");
             }
             catch (System.Data.Entity.Validation.DbEntityValidationException)
             {
-                MessageBox.Show("xd", "Fail");
-               
+
+                this.Alert("Fail", Messages.Messages.enmType.Error);
+                //MessageBox.Show("xd", "Fail");
+
             }
         }
 
@@ -97,6 +108,6 @@ namespace ModernUI.Forms.Administration
             // this.Close();
             this.Visible = false;
         }
-   
+
     }
 }
