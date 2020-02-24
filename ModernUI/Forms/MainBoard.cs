@@ -59,15 +59,7 @@ namespace ModernUI
 
         }
 
-        //chowamy submenu które zostało pokazane wcześniej
-        private void hideSubMenu()
-        {
-            
-            if (panelPlaylistSubmenu.Visible == true)
-            {
-                panelPlaylistSubmenu.Visible = true;
-            }
-        }
+  
 
         private void showSubMenu(Panel subMenu)
         {
@@ -97,26 +89,17 @@ namespace ModernUI
         {
 
             openChildForm(new AllStock());
-            /*
-             * 
-             * Jakiś kod
-             * 
-             * 
-             */
+
 
             //hideSubMenu();
         }
 
+        //
+        AddStock addstock = new AddStock();
         private void button6_Click(object sender, EventArgs e)
         {
-            AddStock addstock = new AddStock();
-            addstock.Show();
 
-            /*
-             * Jakiś kod
-             * 
-             * 
-             */
+            addstock.Visible = !addstock.Visible;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -147,9 +130,7 @@ namespace ModernUI
             panelChildForm.Controls.Add(childForm);
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
-            childForm.Show();
-
-           
+            childForm.Show();      
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -181,7 +162,7 @@ namespace ModernUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Application.Exit();
         }
 
         private void btnAdministration_Click(object sender, EventArgs e)

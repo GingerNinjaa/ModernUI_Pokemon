@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtAddProductName = new System.Windows.Forms.TextBox();
             this.txtAddProductDescription = new System.Windows.Forms.TextBox();
             this.txtAddProductPrice = new System.Windows.Forms.TextBox();
@@ -129,18 +128,6 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Category";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.Honeydew;
-            this.label6.Location = new System.Drawing.Point(44, 388);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 25);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "User Name";
-            // 
             // txtAddProductName
             // 
             this.txtAddProductName.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -200,7 +187,6 @@
             this.Controls.Add(this.txtAddProductPrice);
             this.Controls.Add(this.txtAddProductDescription);
             this.Controls.Add(this.txtAddProductName);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -227,7 +213,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtAddProductName;
         private System.Windows.Forms.TextBox txtAddProductDescription;
         private System.Windows.Forms.TextBox txtAddProductPrice;

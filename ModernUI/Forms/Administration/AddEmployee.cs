@@ -15,11 +15,11 @@ namespace ModernUI.Forms.Administration
     public partial class AddEmployee : Form
     {
         private readonly AllEmployee tmp;
-        public AddEmployee(AllEmployee all)
+        public AddEmployee()
         {
             InitializeComponent();
 
-            tmp = all;
+          
         }
 
         //Turbo ważne do przesuwanie okienka PART 2
@@ -75,7 +75,7 @@ namespace ModernUI.Forms.Administration
                     db.SaveChanges();
                 }
 
-                tmp.AllEmployeeTableUpdate();
+             //   tmp.AllEmployeeTableUpdate();
 
 
                 MessageBox.Show("xd", "succes");
@@ -94,7 +94,8 @@ namespace ModernUI.Forms.Administration
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // this.Close();
+            this.Visible = false;
         }
    
     }

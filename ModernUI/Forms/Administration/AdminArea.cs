@@ -18,6 +18,8 @@ namespace ModernUI.Forms.Administration
             openChildForm(new AllEmployee());
         }
 
+        AddEmployee addEmployee = new AddEmployee();
+
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
@@ -55,8 +57,11 @@ namespace ModernUI.Forms.Administration
 
         private void btnAdminAddEmployee_Click(object sender, EventArgs e)
         {
-            AddEmployee addEmployee = new AddEmployee(new AllEmployee());
-            addEmployee.Show();
+
+
+            addEmployee.Visible = !addEmployee.Visible;
+            
+            //addEmployee.Show();
         }
     }
 }

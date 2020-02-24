@@ -59,7 +59,10 @@ namespace ModernUI.Forms.Stock
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            // this.Close();
+
+            this.Visible = false;
+            
         }
 
         private void btnAddArticle_Click(object sender, EventArgs e)
